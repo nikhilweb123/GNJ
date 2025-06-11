@@ -697,61 +697,68 @@ export default function Component() {
               }}
               viewport={{ once: true }}
             >
-              {/* 3D Holographic Ring */}
+              {/* Video Container */}
               <motion.div
-                className="relative w-96 h-96"
-                animate={{ rotate: 360 }}
-                transition={{ duration: 20, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
+                className="relative w-200 h-200 rounded-full overflow-hidden"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 400 }}
               >
-                <motion.div
-                  className="absolute inset-0 rounded-full border-4 border-gradient-to-r from-cyan-400 via-purple-400 to-pink-400"
-                  style={{
-                    background: "conic-gradient(from 0deg, #06b6d4, #8b5cf6, #ec4899, #06b6d4)",
-                    borderRadius: "50%",
-                    padding: "4px",
-                  }}
-                  animate={{
-                    boxShadow: [
-                      "0 0 20px rgba(6, 182, 212, 0.5)",
-                      "0 0 40px rgba(139, 92, 246, 0.5)",
-                      "0 0 20px rgba(236, 72, 153, 0.5)",
-                      "0 0 20px rgba(6, 182, 212, 0.5)",
-                    ],
-                  }}
-                  transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY }}
+                <video
+                  className="w-full h-full object-cover"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
                 >
-                  <div className="w-full h-full bg-black rounded-full" />
-                </motion.div>
+                  <source src="/wac.mp4" type="video/mp4" />
+                </video>
+                <div className="absolute inset-0 bg-black/20" />
+              </motion.div>
 
-                {/* Stats */}
-                <motion.div
-                  className="absolute -left-16 top-20 bg-gray-800/80 backdrop-blur-sm rounded-lg p-4"
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={{
-                    opacity: [0, 1],
-                    scale: [0, 1],
-                    transition: { delay: 0.5 }
-                  }}
-                  whileHover={{ scale: 1.1 }}
-                >
-                  <div className="text-2xl font-bold">450+</div>
-                  <div className="text-sm text-gray-400">Projects</div>
-                </motion.div>
+              {/* Stats */}
+              <motion.div
+                className="absolute -left-16 top-20 bg-gray-800/80 backdrop-blur-sm rounded-lg p-4"
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{
+                  opacity: [0, 1],
+                  scale: [0, 1],
+                  transition: { delay: 0.5 }
+                }}
+                whileHover={{ scale: 1.1 }}
+              >
+                <div className="text-2xl font-bold">450+</div>
+                <div className="text-sm text-gray-400">Projects</div>
+                
+              </motion.div>
 
-                <motion.div
-                  className="absolute -right-20 -top-8 bg-gray-800/80 backdrop-blur-sm rounded-lg p-4"
-                  initial={{ opacity: 0, scale: 0 }}
-                  animate={{
-                    opacity: [0, 1],
-                    scale: [0, 1],
-                    transition: { delay: 0.7 }
-                  }}
-                  whileHover={{ scale: 1.1 }}
-                >
-                  <div className="text-2xl font-bold">600+</div>
-                  <div className="text-sm text-gray-400">International</div>
-                  <div className="text-sm text-gray-400">Clients</div>
-                </motion.div>
+              <motion.div
+                className="absolute -left-16 top-30 bg-gray-800/80 backdrop-blur-sm rounded-lg p-4"
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{
+                  opacity: [0, 1],
+                  scale: [0, 1],
+                  transition: { delay: 0.5 }
+                }}
+                whileHover={{ scale: 1.1 }}
+              >
+                <div className="text-2xl font-bold">450+</div>
+                <div className="text-sm text-gray-400">Projects</div>
+                
+              </motion.div>
+
+              <motion.div
+                className="absolute -right-20 -top-8 bg-gray-800/80 backdrop-blur-sm rounded-lg p-4"
+                initial={{ opacity: 0, scale: 0 }}
+                animate={{
+                  opacity: [0, 1],
+                  scale: [0, 1],
+                  transition: { delay: 0.7 }
+                }}
+                whileHover={{ scale: 1.1 }}
+              >
+                <div className="text-2xl font-bold">600+</div>
+                <div className="text-sm text-gray-400">International</div>
+                <div className="text-sm text-gray-400">Clients</div>
               </motion.div>
             </motion.div>
           </div>
