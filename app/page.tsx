@@ -39,35 +39,55 @@ export default function Component() {
 
   const services = [
     {
-      title: "Branding",
+      title: "Software Development",
       description:
-        "Ensure that your brand is consistent on every single touch point through an intuitive visual identity.",
+        "Custom software solutions tailored to your business needs with cutting-edge technologies and best practices.",
       gradient: "from-purple-400 via-pink-400 to-blue-400",
     },
     {
-      title: "UI/UX Design",
-      description: "Embracing UI/UX in crafting seamless experiences, keeping up with efficiency and elegance",
+      title: "Web Development",
+      description: "Responsive and dynamic web applications built with modern frameworks for optimal performance and user experience",
       gradient: "from-blue-400 via-cyan-400 to-teal-400",
     },
     {
-      title: "E-commerce",
-      description: "Bridge the gap between your storefront and customer with our strategic eCommerce solutions",
+      title: "IT Support",
+      description: "Comprehensive technical assistance and maintenance services to keep your systems running smoothly",
       gradient: "from-teal-400 via-green-400 to-cyan-400",
     },
     {
-      title: "Web App",
-      description: "Creating powerful web applications that drive engagement and deliver exceptional user experiences",
+      title: "UI/UX Design",
+      description: "Creating intuitive and engaging user interfaces that enhance user satisfaction and drive conversion",
       gradient: "from-purple-400 via-blue-400 to-cyan-400",
     },
     {
-      title: "Mobile App",
+      title: "Mobile App Development",
       description: "Native and cross-platform mobile solutions that connect users to your brand anywhere, anytime",
       gradient: "from-pink-400 via-purple-400 to-blue-400",
     },
     {
-      title: "DevOps Consulting",
-      description: "Streamline your development pipeline with our expert DevOps consulting and automation services",
+      title: "Integrations",
+      description: "Seamless integration of third-party services and APIs to enhance functionality and streamline workflows",
       gradient: "from-cyan-400 via-blue-400 to-purple-400",
+    },
+    {
+      title: "Cloud Solutions",
+      description: "Scalable and secure cloud infrastructure setup and management for improved efficiency and reduced costs",
+      gradient: "from-purple-400 via-pink-400 to-blue-400",
+    },
+    {
+      title: "IT Infrastructure",
+      description: "Design and implementation of robust IT infrastructure tailored to your organization's specific requirements",
+      gradient: "from-blue-400 via-cyan-400 to-teal-400",
+    },
+    {
+      title: "Cyber Security",
+      description: "Comprehensive security solutions to protect your digital assets from threats and ensure data integrity",
+      gradient: "from-teal-400 via-green-400 to-cyan-400",
+    },
+    {
+      title: "Mobile Application Service",
+      description: "Ongoing support, maintenance, and enhancement services for your mobile applications",
+      gradient: "from-purple-400 via-blue-400 to-cyan-400",
     },
   ]
 
