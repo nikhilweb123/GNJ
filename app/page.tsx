@@ -120,7 +120,7 @@ export default function Component() {
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 400 }}
             >
-              wac
+              GNJ
             </motion.div>
             <div className="hidden md:flex items-center space-x-8">
               {["Services", "Solutions", "Industries", "Works", "About", "Careers", "Contact"].map((item, index) => (
@@ -183,7 +183,7 @@ export default function Component() {
               whileHover={{ scale: 1.02, boxShadow: "0 25px 50px -12px rgba(255, 255, 255, 0.1)" }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <h2 className="text-lg text-gray-300 mb-4">Welcome Google</h2>
+              <h2 className="text-lg text-gray-300 mb-4">Welcome to GNJ</h2>
               <div className="flex items-center justify-center space-x-4 mb-4">
                 <motion.span
                   className="text-3xl font-bold"
@@ -192,7 +192,7 @@ export default function Component() {
                   }}
                   transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
                 >
-                  wac
+                  GNJ
                 </motion.span>
                 <motion.span
                   className="text-2xl"
@@ -208,7 +208,7 @@ export default function Component() {
                   }}
                   transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY }}
                 >
-                  Google
+                  Cyber Solutions
                 </motion.span>
               </div>
               <p className="text-gray-400">Empowering Innovation Together</p>
@@ -228,10 +228,10 @@ export default function Component() {
               transition={{ duration: 5, repeat: Number.POSITIVE_INFINITY }}
               className="bg-gradient-to-r from-white via-gray-300 to-white bg-[length:200%_100%] bg-clip-text text-transparent"
             >
-              Welcome to WAC,
+              Welcome to GNJ,
             </motion.span>
             <br />
-            <span className="text-gray-400">Team Google!</span>
+            <span className="text-gray-400">Team GNJ!</span>
           </motion.h1>
 
           <motion.button
