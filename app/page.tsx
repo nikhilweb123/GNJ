@@ -131,23 +131,23 @@ export default function Component() {
                   { name: "About", link: "/about" },
                   { name: "Careers", link: "/careers" },
                   { name: "Contact", link: "/contact" },
-                  ].map((item) => (
-                    <motion.a
-                      key={item.name}
-                      href={item.link}
-                      className="hover:text-gray-300 transition-colors relative"
-                      whileHover={{ y: -2 }}
-                      transition={{ type: "spring", stiffness: 400 }}
-                    >
-                      {item.name}
-                      <motion.div
-                        className="absolute -bottom-1 left-0 right-0 h-0.5 bg-white"
-                        initial={{ scaleX: 0 }}
-                        whileHover={{ scaleX: 1 }}
-                        transition={{ duration: 0.3 }}
-                      />
-                    </motion.a>
-                  ))}
+                ].map((item) => (
+                  <motion.a
+                    key={item.name}
+                    href={item.link}
+                    className="hover:text-gray-300 transition-colors relative"
+                    whileHover={{ y: -2 }}
+                    transition={{ type: "spring", stiffness: 400 }}
+                  >
+                    {item.name}
+                    <motion.div
+                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-white"
+                      initial={{ scaleX: 0 }}
+                      whileHover={{ scaleX: 1 }}
+                      transition={{ duration: 0.3 }}
+                    />
+                  </motion.a>
+                ))}
               </div>
 
 
