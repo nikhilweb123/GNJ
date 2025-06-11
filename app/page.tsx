@@ -122,25 +122,35 @@ export default function Component() {
             >
               GNJ
             </motion.div>
-            <div className="hidden md:flex items-center space-x-8">
-              {["Services", "Solutions", "Industries", "Works", "About", "Careers", "Contact"].map((item, index) => (
-                <motion.a
-                  key={item}
-                  href="#"
-                  className="hover:text-gray-300 transition-colors relative"
-                  whileHover={{ y: -2 }}
-                  transition={{ type: "spring", stiffness: 400 }}
-                >
-                  {item}
-                  <motion.div
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-white"
-                    initial={{ scaleX: 0 }}
-                    whileHover={{ scaleX: 1 }}
-                    transition={{ duration: 0.3 }}
-                  />
-                </motion.a>
-              ))}
-            </div>
+              <div className="hidden md:flex items-center space-x-8">
+                {[
+                  { name: "Services", link: "#services" },
+                  { name: "Solutions", link: "/solutions" },
+                  { name: "Industries", link: "/industries" },
+                  { name: "Works", link: "/works" },
+                  { name: "About", link: "/about" },
+                  { name: "Careers", link: "/careers" },
+                  { name: "Contact", link: "/contact" },
+                  ].map((item) => (
+                    <motion.a
+                      key={item.name}
+                      href={item.link}
+                      className="hover:text-gray-300 transition-colors relative"
+                      whileHover={{ y: -2 }}
+                      transition={{ type: "spring", stiffness: 400 }}
+                    >
+                      {item.name}
+                      <motion.div
+                        className="absolute -bottom-1 left-0 right-0 h-0.5 bg-white"
+                        initial={{ scaleX: 0 }}
+                        whileHover={{ scaleX: 1 }}
+                        transition={{ duration: 0.3 }}
+                      />
+                    </motion.a>
+                  ))}
+              </div>
+
+
             <div className="flex items-center space-x-4">
               <motion.div whileHover={{ scale: 1.1, rotate: 5 }}>
                 <Phone className="w-5 h-5" />
