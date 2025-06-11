@@ -1,10 +1,14 @@
-import type { Metadata } from 'next'
-import './globals.css'
+import type { Metadata } from "next"
+import { Inter } from "next/font/google"
+import "./globals.css"
+import Header from "./components/Header"
+import Footer from "./components/Footer"
+
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: 'GNJ',
-  description: 'Cyber security website',
-  generator: 'Koncept Solution',
+  title: "GNJ - Technology Solutions",
+  description: "Empowering Innovation Together",
 }
 
 export default function RootLayout({
@@ -14,9 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head />
-      <body>
-        {children}
+      <body className={inter.className} suppressHydrationWarning>
+        <Header />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   )

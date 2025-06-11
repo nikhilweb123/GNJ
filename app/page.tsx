@@ -5,6 +5,7 @@ import type React from "react"
 import { useEffect, useRef, useState } from "react"
 import { motion, useScroll, useTransform, useInView } from "framer-motion"
 import { Menu, Phone, Search, Bookmark, ArrowRight } from "lucide-react"
+import { useTextShadowAnimation, useRotationAnimation } from "./hooks/useAnimation"
 
 export default function Component() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -22,6 +23,9 @@ export default function Component() {
   const butterflyX = useTransform(scrollYProgress, [0, 1], [0, 500])
   const butterflyY = useTransform(scrollYProgress, [0, 1], [0, -300])
   const butterflyRotate = useTransform(scrollYProgress, [0, 1], [0, 720])
+
+  const textShadowAnimation = useTextShadowAnimation(3)
+  const rotationAnimation = useRotationAnimation(12)
 
   useEffect(() => {
     const unsubscribe = scrollYProgress.on("change", (latest) => {
@@ -111,62 +115,6 @@ export default function Component() {
 
   return (
     <div ref={containerRef} className="bg-black text-white overflow-hidden">
-      {/* Fixed Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-gray-800">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <motion.div
-              className="text-2xl font-bold"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 400 }}
-            >
-              GNJ
-            </motion.div>
-              <div className="hidden md:flex items-center space-x-8">
-                {[
-                  { name: "Services", link: "#services" },
-                  { name: "Solutions", link: "/solutions" },
-                  { name: "Industries", link: "/industries" },
-                  { name: "Works", link: "/works" },
-                  { name: "About", link: "/about" },
-                  { name: "Careers", link: "/careers" },
-                  { name: "Contact", link: "/contact" },
-                ].map((item) => (
-                  <motion.a
-                    key={item.name}
-                    href={item.link}
-                    className="hover:text-gray-300 transition-colors relative"
-                    whileHover={{ y: -2 }}
-                    transition={{ type: "spring", stiffness: 400 }}
-                  >
-                    {item.name}
-                    <motion.div
-                      className="absolute -bottom-1 left-0 right-0 h-0.5 bg-white"
-                      initial={{ scaleX: 0 }}
-                      whileHover={{ scaleX: 1 }}
-                      transition={{ duration: 0.3 }}
-                    />
-                  </motion.a>
-                ))}
-              </div>
-
-
-            <div className="flex items-center space-x-4">
-              <motion.div whileHover={{ scale: 1.1, rotate: 5 }}>
-                <Phone className="w-5 h-5" />
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.1, rotate: -5 }}>
-                <Search className="w-5 h-5" />
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.1, rotate: 5 }}>
-                <Bookmark className="w-5 h-5" />
-              </motion.div>
-              <Menu className="w-6 h-6 md:hidden" />
-            </div>
-          </div>
-        </div>
-      </nav>
-
       {/* Hero Section with Video Banner */}
       <motion.section
         className="relative h-screen flex items-center justify-center"
@@ -174,9 +122,14 @@ export default function Component() {
       >
         {/* Video Background */}
         <div className="absolute inset-0 z-0">
-          <video autoPlay muted loop className="w-full h-full object-cover opacity-30">
-            <source src="/placeholder.mp4" type="video/mp4" />
-          </video>
+          <div className="relative w-full h-full">
+            <iframe
+              src="https://www.youtube.com/embed/_Sl8diqCAFw?autoplay=1&mute=1&loop=1&playlist=_Sl8diqCAFw&controls=0&showinfo=0&rel=0&modestbranding=1"
+              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[150%] h-[120%] pointer-events-none"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/70" />
         </div>
 
@@ -184,8 +137,10 @@ export default function Component() {
         <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.5 }}
+            animate={{
+              opacity: [0, 1],
+              transition: { duration: 1, delay: 0.5 }
+            }}
             className="mb-8"
           >
             <motion.div
@@ -216,7 +171,7 @@ export default function Component() {
                   animate={{
                     color: ["#3B82F6", "#8B5CF6", "#EF4444", "#3B82F6"],
                   }}
-                  transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY }}
+                  transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY }} 
                 >
                   Cyber Solutions
                 </motion.span>
@@ -228,8 +183,10 @@ export default function Component() {
           <motion.h1
             className="text-6xl md:text-8xl font-light mb-8"
             initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.8 }}
+            animate={{
+              opacity: [0, 1],
+              transition: { duration: 1, delay: 0.8 }
+            }}
           >
             <motion.span
               animate={{
@@ -247,8 +204,10 @@ export default function Component() {
           <motion.button
             className="inline-flex items-center space-x-2 text-lg hover:text-gray-300 transition-colors border border-white/30 px-6 py-3 rounded-lg"
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 1.2 }}
+            animate={{
+              opacity: [0, 1],
+              transition: { duration: 1, delay: 1.2 }
+            }}
             whileHover={{
               scale: 1.05,
               boxShadow: "0 10px 25px rgba(255, 255, 255, 0.1)",
@@ -264,8 +223,11 @@ export default function Component() {
         <motion.div
           className="absolute bottom-8 right-8 bg-white/10 backdrop-blur-sm rounded-lg p-4"
           initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, delay: 1.5 }}
+          animate={{
+            opacity: [0, 1],
+            x: [50, 0],
+            transition: { duration: 1, delay: 1.5 }
+          }}
           whileHover={{ scale: 1.05 }}
         >
           <div className="text-sm text-gray-400 mb-2">Next</div>
@@ -312,23 +274,30 @@ export default function Component() {
           <motion.h2
             className="text-5xl md:text-7xl font-light leading-tight"
             initial={{ opacity: 0, y: 50 }}
+            animate={{
+              opacity: [0, 1],
+              transition: { duration: 1.2 }
+            }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.2 }}
             viewport={{ once: true }}
           >
             We believe in a world where{" "}
             <motion.span
               className="text-gray-400"
-              whileInView={{ color: ["#9CA3AF", "#FFFFFF", "#9CA3AF"] }}
-              transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY }}
+              animate={{
+                color: ["#9CA3AF", "#FFFFFF", "#9CA3AF"],
+                transition: { duration: 3, repeat: Number.POSITIVE_INFINITY }
+              }}
             >
               technology fosters
             </motion.span>{" "}
             your everyday experiences.{" "}
             <motion.span
               className="text-gray-400"
-              whileInView={{ color: ["#9CA3AF", "#FFFFFF", "#9CA3AF"] }}
-              transition={{ duration: 3, repeat: Number.POSITIVE_INFINITY, delay: 1.5 }}
+              animate={{
+                color: ["#9CA3AF", "#FFFFFF", "#9CA3AF"],
+                transition: { duration: 3, repeat: Number.POSITIVE_INFINITY, delay: 1.5 }
+              }}
             >
               And our mission is to make it happen!
             </motion.span>
@@ -343,23 +312,24 @@ export default function Component() {
             <motion.h2
               className="text-8xl md:text-9xl lg:text-[12rem] font-light text-white"
               initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1.5, ease: "easeOut" }}
-              viewport={{ once: true }}
               animate={{
+                opacity: [0, 1],
+                scale: [0.8, 1],
                 textShadow: [
                   "0 0 20px rgba(255, 255, 255, 0.5)",
                   "0 0 40px rgba(255, 255, 255, 0.8)",
                   "0 0 20px rgba(255, 255, 255, 0.5)",
                 ],
+                transition: {
+                  opacity: { duration: 1.5, ease: "easeOut" },
+                  scale: { duration: 1.5, ease: "easeOut" },
+                  textShadow: {
+                    duration: 3,
+                    repeat: Number.POSITIVE_INFINITY,
+                  }
+                }
               }}
-              transition={{
-                textShadow: {
-                  duration: 3,
-                  repeat: Number.POSITIVE_INFINITY,
-                  ease: "easeInOut",
-                },
-              }}
+              viewport={{ once: true }}
             >
               Design
             </motion.h2>
@@ -368,19 +338,21 @@ export default function Component() {
             <motion.div
               className="absolute top-1/4 right-1/4 w-16 h-16"
               initial={{ opacity: 0, scale: 0 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.8, duration: 1 }}
-              viewport={{ once: true }}
               animate={{
+                opacity: [0, 1],
+                scale: [0, 1],
                 x: [0, 50, -30, 20, 0],
                 y: [0, -30, 20, -40, 0],
                 rotate: [0, 15, -10, 25, 0],
+                transition: {
+                  opacity: { delay: 0.8, duration: 1 },
+                  scale: { delay: 0.8, duration: 1 },
+                  x: { duration: 12, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" },
+                  y: { duration: 12, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" },
+                  rotate: { duration: 12, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }
+                }
               }}
-              transition={{
-                duration: 12,
-                repeat: Number.POSITIVE_INFINITY,
-                ease: "easeInOut",
-              }}
+              viewport={{ once: true }}
             >
               <motion.div
                 className="relative"
@@ -449,11 +421,11 @@ export default function Component() {
               animate={{
                 y: [-20, 20, -20],
                 opacity: [0.3, 0.8, 0.3],
-              }}
-              transition={{
-                duration: 4,
-                repeat: Number.POSITIVE_INFINITY,
-                ease: "easeInOut",
+                transition: {
+                  duration: 4,
+                  repeat: Number.POSITIVE_INFINITY,
+                  ease: "easeInOut"
+                }
               }}
             >
               <div className="w-full h-full bg-gradient-to-r from-pink-500 to-purple-500 rounded-full opacity-40" />
@@ -469,23 +441,24 @@ export default function Component() {
             <motion.h2
               className="text-8xl md:text-9xl lg:text-[12rem] font-light text-white"
               initial={{ opacity: 0, x: -100 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1.5, ease: "easeOut" }}
-              viewport={{ once: true }}
               animate={{
+                opacity: [0, 1],
+                x: [0, 0],
                 textShadow: [
                   "0 0 30px rgba(6, 182, 212, 0.6)",
                   "0 0 60px rgba(139, 92, 246, 0.8)",
                   "0 0 30px rgba(6, 182, 212, 0.6)",
                 ],
+                transition: {
+                  opacity: { duration: 1.5, ease: "easeOut" },
+                  x: { duration: 1.5, ease: "easeOut" },
+                  textShadow: {
+                    duration: 4,
+                    repeat: Number.POSITIVE_INFINITY,
+                  }
+                }
               }}
-              transition={{
-                textShadow: {
-                  duration: 4,
-                  repeat: Number.POSITIVE_INFINITY,
-                  ease: "easeInOut",
-                },
-              }}
+              viewport={{ once: true }}
             >
               Build
             </motion.h2>
@@ -494,18 +467,17 @@ export default function Component() {
             <motion.div
               className="absolute top-1/2 left-0 transform -translate-y-1/2"
               initial={{ opacity: 0, scale: 0 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.5, duration: 1 }}
-              viewport={{ once: true }}
               animate={{
+                opacity: [0, 1],
+                scale: [0, 1],
                 y: [-30, 30, -30],
-                opacity: [0.2, 0.8, 0.2],
+                transition: {
+                  opacity: { delay: 0.5, duration: 1 },
+                  scale: { delay: 0.5, duration: 1 },
+                  y: { duration: 5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }
+                }
               }}
-              transition={{
-                duration: 5,
-                repeat: Number.POSITIVE_INFINITY,
-                ease: "easeInOut",
-              }}
+              viewport={{ once: true }}
             >
               <div className="w-32 h-32 border-2 border-cyan-400 rounded-full opacity-40" />
             </motion.div>
@@ -513,18 +485,13 @@ export default function Component() {
             <motion.div
               className="absolute top-1/4 right-1/4 transform -translate-y-1/2"
               initial={{ opacity: 0, scale: 0 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.7, duration: 1 }}
-              viewport={{ once: true }}
               animate={{
-                scale: [1, 1.3, 1],
+                opacity: [0, 1],
+                scale: [0, 1.3, 1],
                 rotate: [0, 180, 360],
+                transition: { duration: 8, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }
               }}
-              transition={{
-                duration: 8,
-                repeat: Number.POSITIVE_INFINITY,
-                ease: "easeInOut",
-              }}
+              viewport={{ once: true }}
             >
               <div className="w-24 h-24 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full opacity-30" />
             </motion.div>
@@ -556,22 +523,22 @@ export default function Component() {
             <motion.h2
               className="text-8xl md:text-9xl lg:text-[12rem] font-light text-white"
               initial={{ opacity: 0, y: 100 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1.5, ease: "easeOut" }}
-              viewport={{ once: true }}
               animate={{
+                opacity: [0, 1],
+                y: [0, 0],
                 textShadow: [
                   "0 0 25px rgba(236, 72, 153, 0.6)",
                   "0 0 50px rgba(168, 85, 247, 0.8)",
                   "0 0 25px rgba(236, 72, 153, 0.6)",
                 ],
-              }}
-              transition={{
-                textShadow: {
-                  duration: 5,
-                  repeat: Number.POSITIVE_INFINITY,
-                  ease: "easeInOut",
-                },
+                transition: {
+                  opacity: { duration: 1.5, ease: "easeOut" },
+                  y: { duration: 1.5, ease: "easeOut" },
+                  textShadow: {
+                    duration: 5,
+                    repeat: Number.POSITIVE_INFINITY,
+                  }
+                }
               }}
             >
               Create
@@ -633,22 +600,22 @@ export default function Component() {
             <motion.h2
               className="text-7xl md:text-8xl lg:text-[10rem] font-light text-white"
               initial={{ opacity: 0, scale: 0.5 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 2, ease: "easeOut" }}
-              viewport={{ once: true }}
               animate={{
+                opacity: [0, 1],
+                scale: [0.5, 1],
                 textShadow: [
                   "0 0 35px rgba(34, 197, 94, 0.6)",
                   "0 0 70px rgba(59, 130, 246, 0.8)",
                   "0 0 35px rgba(34, 197, 94, 0.6)",
                 ],
-              }}
-              transition={{
-                textShadow: {
-                  duration: 6,
-                  repeat: Number.POSITIVE_INFINITY,
-                  ease: "easeInOut",
-                },
+                transition: {
+                  opacity: { duration: 2, ease: "easeOut" },
+                  scale: { duration: 2, ease: "easeOut" },
+                  textShadow: {
+                    duration: 6,
+                    repeat: Number.POSITIVE_INFINITY,
+                  }
+                }
               }}
             >
               Innovate
@@ -694,8 +661,11 @@ export default function Component() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
+              animate={{
+                opacity: [0, 1],
+                x: [0, 0],
+                transition: { duration: 1 }
+              }}
               viewport={{ once: true }}
             >
               <h2 className="text-6xl md:text-7xl font-light mb-8">Our Story</h2>
@@ -720,8 +690,11 @@ export default function Component() {
             <motion.div
               className="relative flex items-center justify-center"
               initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
+              animate={{
+                opacity: [0, 1],
+                x: [0, 0],
+                transition: { duration: 1 }
+              }}
               viewport={{ once: true }}
             >
               {/* 3D Holographic Ring */}
@@ -754,8 +727,11 @@ export default function Component() {
                 <motion.div
                   className="absolute -left-16 top-20 bg-gray-800/80 backdrop-blur-sm rounded-lg p-4"
                   initial={{ opacity: 0, scale: 0 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.5 }}
+                  animate={{
+                    opacity: [0, 1],
+                    scale: [0, 1],
+                    transition: { delay: 0.5 }
+                  }}
                   whileHover={{ scale: 1.1 }}
                 >
                   <div className="text-2xl font-bold">450+</div>
@@ -765,8 +741,11 @@ export default function Component() {
                 <motion.div
                   className="absolute -right-20 -top-8 bg-gray-800/80 backdrop-blur-sm rounded-lg p-4"
                   initial={{ opacity: 0, scale: 0 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ delay: 0.7 }}
+                  animate={{
+                    opacity: [0, 1],
+                    scale: [0, 1],
+                    transition: { delay: 0.7 }
+                  }}
                   whileHover={{ scale: 1.1 }}
                 >
                   <div className="text-2xl font-bold">600+</div>
@@ -785,8 +764,11 @@ export default function Component() {
           <motion.h2
             className="text-6xl md:text-7xl font-light mb-16"
             initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            animate={{
+              opacity: [0, 1],
+              y: [0, 0],
+              transition: { duration: 1 }
+            }}
             viewport={{ once: true }}
           >
             Services
@@ -798,8 +780,11 @@ export default function Component() {
                 key={service.title}
                 className="group cursor-pointer"
                 initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
+                animate={{
+                  opacity: [0, 1],
+                  y: [0, 0],
+                  transition: { duration: 0.8, delay: index * 0.1 }
+                }}
                 viewport={{ once: true }}
                 whileHover={{ y: -10 }}
               >
@@ -837,8 +822,11 @@ export default function Component() {
             <motion.h2
               className="text-6xl md:text-7xl font-light"
               initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
+              animate={{
+                opacity: [0, 1],
+                x: [0, 0],
+                transition: { duration: 1 }
+              }}
               viewport={{ once: true }}
             >
               Clients
@@ -847,8 +835,11 @@ export default function Component() {
             <motion.p
               className="text-xl text-gray-300"
               initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1, delay: 0.2 }}
+              animate={{
+                opacity: [0, 1],
+                x: [0, 0],
+                transition: { duration: 1, delay: 0.2 }
+              }}
               viewport={{ once: true }}
             >
               Our clients are everything to us; so are we to them.
@@ -861,11 +852,13 @@ export default function Component() {
                 key={client}
                 className="flex items-center justify-center p-6 border border-gray-800 rounded-lg hover:border-gray-600 transition-colors"
                 initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.05 }}
+                animate={{
+                  opacity: [0, 1],
+                  scale: [0.8, 1.05],
+                  transition: { duration: 0.6, delay: index * 0.05 }
+                }}
                 viewport={{ once: true }}
                 whileHover={{
-                  scale: 1.05,
                   boxShadow: "0 10px 25px rgba(255, 255, 255, 0.1)",
                 }}
               >
@@ -877,8 +870,11 @@ export default function Component() {
           <motion.div
             className="text-center"
             initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1 }}
+            animate={{
+              opacity: [0, 1],
+              y: [0, 0],
+              transition: { duration: 1 }
+            }}
             viewport={{ once: true }}
           >
             <motion.button
@@ -903,8 +899,11 @@ export default function Component() {
           <div className="flex flex-col lg:flex-row items-center justify-between">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
+              animate={{
+                opacity: [0, 1],
+                x: [0, 0],
+                transition: { duration: 1 }
+              }}
               viewport={{ once: true }}
             >
               <h2 className="text-6xl md:text-7xl font-light mb-4">Get started now!</h2>
@@ -914,8 +913,11 @@ export default function Component() {
             <motion.button
               className="mt-8 lg:mt-0 inline-flex items-center space-x-2 text-lg border border-white/30 px-8 py-4 rounded-lg"
               initial={{ opacity: 0, x: 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1 }}
+              animate={{
+                opacity: [0, 1],
+                x: [0, 0],
+                transition: { duration: 1 }
+              }}
               viewport={{ once: true }}
               whileHover={{
                 scale: 1.05,
@@ -929,89 +931,6 @@ export default function Component() {
           </div>
         </div>
       </AnimatedSection>
-
-      {/* Footer */}
-      <footer className="border-t border-gray-800 py-16">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-lg font-semibold mb-6">Company</h3>
-              <div className="space-y-4">
-                {["About", "Services", "Industries", "Works", "Careers", "Contact"].map((item) => (
-                  <motion.a
-                    key={item}
-                    href="#"
-                    className="block text-gray-400 hover:text-white transition-colors"
-                    whileHover={{ x: 5 }}
-                  >
-                    {item}
-                  </motion.a>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold mb-6">Services</h3>
-              <div className="space-y-4">
-                {["Branding", "Experience Design", "Technology", "Digital Marketing"].map((item) => (
-                  <motion.a
-                    key={item}
-                    href="#"
-                    className="block text-gray-400 hover:text-white transition-colors"
-                    whileHover={{ x: 5 }}
-                  >
-                    {item}
-                  </motion.a>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold mb-6">Other</h3>
-              <div className="space-y-4">
-                {["Partnership", "Awards and Recognitions", "Insights", "Blogs", "Resource", "Augmentation"].map(
-                  (item) => (
-                    <motion.a
-                      key={item}
-                      href="#"
-                      className="block text-gray-400 hover:text-white transition-colors"
-                      whileHover={{ x: 5 }}
-                    >
-                      {item}
-                    </motion.a>
-                  ),
-                )}
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-lg font-semibold mb-6">Connect</h3>
-              <div className="space-y-4">
-                <div>
-                  <div className="text-sm text-gray-400 mb-1">General Enquiry</div>
-                  <div>+91 480 2733 111</div>
-                </div>
-                <div>
-                  <div className="text-sm text-gray-400 mb-1">Sales Enquiry</div>
-                  <div>+91 480 2733 555</div>
-                </div>
-                <div>
-                  <div className="text-sm text-gray-400 mb-1">Email</div>
-                  <div>info@webandcrafts.com</div>
-                </div>
-                <div>
-                  <div className="text-sm text-gray-400 mb-1">HR Enquiry</div>
-                  <div>+91 480 2733 999</div>
-                </div>
-                <div>
-                  <div className="text-sm text-gray-400 mb-1">Whatsapp (Sales)</div>
-                  <div>+91 8606 483 399</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
 
       {/* Floating Particles */}
       {[...Array(12)].map((_, i) => (
@@ -1057,6 +976,14 @@ export default function Component() {
           ))}
         </div>
       </div>
+
+      <motion.div {...textShadowAnimation}>
+        {/* content */}
+      </motion.div>
+      
+      <motion.div {...rotationAnimation}>
+        {/* content */}
+      </motion.div>
     </div>
   )
 }
