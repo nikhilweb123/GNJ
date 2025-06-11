@@ -700,8 +700,8 @@ export default function Component() {
               {/* Video Container */}
               <motion.div
                 className="relative w-200 h-200 rounded-full overflow-hidden"
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 400 }}
+                whileHover={{ scale: 1.2 }}
+                transition={{ type: "spring", stiffness: 100 }}
               >
                 <video
                   className="w-full h-full object-cover"
@@ -741,8 +741,8 @@ export default function Component() {
                 }}
                 whileHover={{ scale: 1.1 }}
               >
-                <div className="text-2xl font-bold">450+</div>
-                <div className="text-sm text-gray-400">Projects</div>
+                <div className="text-2xl font-bold">100</div>
+                <div className="text-sm text-gray-400">Brands</div>
                 
               </motion.div>
 

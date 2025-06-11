@@ -45,15 +45,15 @@ export default function Header() {
             ))}
           </div>
 
-          <div className="flex text-white items-center space-x-4">
+          <div className="flex text-white items-center space-x-8">
             <motion.div whileHover={{ scale: 1.1, rotate: 5 }}>
-              <Phone className="w-5 h-5" />
+              <Phone className="w-6 h-6" />
             </motion.div>
             <motion.div whileHover={{ scale: 1.1, rotate: -5 }}>
-              <Search className="w-5 h-5" />
+              <Search className="w-6 h-6" />
             </motion.div>
             <motion.div whileHover={{ scale: 1.1, rotate: 5 }}>
-              <Bookmark className="w-5 h-5" />
+              <Bookmark className="w-6 h-6" />
             </motion.div>
             <Menu className="w-6 h-6 md:hidden" />
           </div>
