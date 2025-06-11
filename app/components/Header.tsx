@@ -9,14 +9,16 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <motion.div
-            className="text-2xl text-[#ffffff] font-bold"
-            whileHover={{ scale: 1.05 }}
+            className="text-3xl text-[#ffffff] font-bold"
+            whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 400 }}
           >
-            GNJ
+            GNJ Worldwide
           </motion.div>
+          
           <div className="hidden md:flex items-center space-x-8">
             {[
+              
               { name: "Services", link: "/services" },
               { name: "Solutions", link: "/solutions" },
               { name: "Industries", link: "/industries" },
