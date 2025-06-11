@@ -2,19 +2,22 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'GNJ ',
+  title: 'GNJ',
   description: 'Cyber security website',
-  generator: 'Koncept solution',
+  generator: 'Koncept Solution',
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <head />
+      <body>
+        {children}
+      </body>
     </html>
   )
 }
