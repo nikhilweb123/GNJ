@@ -28,24 +28,43 @@ const contactInfo = [
     description: "Send us an email anytime",
   },
   {
-    icon: Phone,
-    title: "Call Us",
-    details: "+1 (555) 123-4567",
-    description: "Mon-Fri from 8am to 6pm",
+    icon: MapPin,
+    title: "Visit Us",
+    details: "10th Floor, BKC Complex, Awfis, East Bandra, Mumbai, 400051 Maharashtra, India",
+    description: "Come say hello at our office",
   },
   {
     icon: MapPin,
-    title: "Visit Us",
-    details: "123 Tech Street, Silicon Valley, CA 94000",
-    description: "Come say hello at our office",
+    title: "Register Address",
+    details: "32/147, Ramanand Nagar, Near Ram Mandir, Jalgaon, 425002 Maharashtra, India",
+    description: "Our Register Address",
   },
   {
     icon: Clock,
     title: "Working Hours",
-    details: "Mon-Fri: 8am-6pm PST",
+    details: "Mon-Fri: 9am-6pm PST",
     description: "We're here to help during business hours",
   },
+  {
+    icon: Phone,
+    title: "General Enquiry",
+    details: "+91 480 2733 111",
+    description: "For general questions and support",
+  },
+  {
+    icon: Phone,
+    title: "Sales Enquiry",
+    details: "+91 480 2733 555",
+    description: "Reach out to our sales team",
+  },
+  {
+    icon: Mail,
+    title: "Email",
+    details: "info@webandcrafts.com",
+    description: "Drop us an email anytime",
+  },
 ]
+
 
 const services = [
   { icon: MessageSquare, title: "General Inquiry", description: "Questions about our services" },
