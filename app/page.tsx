@@ -717,49 +717,72 @@ export default function Component() {
 
               {/* Stats */}
               <motion.div
-                className="absolute -left-16 top-20 bg-gray-800/80 backdrop-blur-sm rounded-lg p-4"
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{
-                  opacity: [0, 1],
-                  scale: [0, 1],
-                  transition: { delay: 0.5 }
-                }}
-                whileHover={{ scale: 1.1 }}
-              >
-                <div className="text-2xl font-bold">450+</div>
-                <div className="text-sm text-gray-400">Projects</div>
-                
-              </motion.div>
+                    className="absolute z-10 bg-gray-800/80 backdrop-blur-sm rounded-md px-3 py-2 text-white"
+                    style={{ top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}
+                    animate={{
+                      x: [-200, -100, 0, 100, 200],              // only left to right
+                      y: [0, -10, -20, -10, 0],                  // slight arc path
+                      opacity: [0, 0.5, 1, 0.5, 0],              // fade in at center, fade out near edges
+                      scale: [0.9, 1, 1.1, 1, 0.9],              // slight zoom-in at center
+                    }}
+                    transition={{
+                      duration: 10,
+                      ease: "easeInOut",
+                      repeat: Infinity,
+                    }}
+                    whileHover={{ scale: 1.1 }}
+                  >
+                    <div className="text-sm font-semibold text-white">450+</div>
+                    <div className="text-xs text-gray-400">Projects</div>
+                </motion.div>
+
 
               <motion.div
-                className="absolute -left-16 top-30 bg-gray-800/80 backdrop-blur-sm rounded-lg p-4"
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{
-                  opacity: [0, 1],
-                  scale: [0, 1],
-                  transition: { delay: 0.5 }
-                }}
-                whileHover={{ scale: 1.1 }}
-              >
-                <div className="text-2xl font-bold">100</div>
-                <div className="text-sm text-gray-400">Brands</div>
-                
+                    className="absolute z-10 bg-gray-800/80 backdrop-blur-sm rounded-md px-3 py-2 text-white"
+                    style={{ top: '60%', left: '50%', transform: 'translate(-50%, -50%)' }}
+                    animate={{
+                      x: [-300, -200, -100, 0, 100, 200, 300],
+                      y: [20, 10, 5, 0, -5, -10, -20],
+                      opacity: [0, 0.4, 0.8, 1, 0.8, 0.4, 0],
+                      scale: [0.8, 0.9, 1, 1.05, 1, 0.9, 0.8],
+                    }}
+                    transition={{
+                      duration: 8,
+                      ease: "easeInOut",
+                      repeat: Infinity,
+                    }}
+                    whileHover={{ scale: 1.1 }}
+                  >
+                    <div className="text-sm font-bold text-white">100</div>
+                    <div className="text-xs text-gray-400">Brands</div>
               </motion.div>
 
+
+
+
               <motion.div
-                className="absolute -right-20 -top-8 bg-gray-800/80 backdrop-blur-sm rounded-lg p-4"
-                initial={{ opacity: 0, scale: 0 }}
-                animate={{
-                  opacity: [0, 1],
-                  scale: [0, 1],
-                  transition: { delay: 0.7 }
-                }}
-                whileHover={{ scale: 1.1 }}
-              >
-                <div className="text-2xl font-bold">600+</div>
-                <div className="text-sm text-gray-400">International</div>
-                <div className="text-sm text-gray-400">Clients</div>
+                  className="absolute z-10 bg-gray-800/80 backdrop-blur-sm rounded-lg px-4 py-2 text-white"
+                  style={{ top: '40%', left: '50%', transform: 'translate(-50%, -50%)' }}
+                  animate={{
+                    x: [-200, -100, 0, 100, 200],
+                    y: [20, 10, 0, -10, -20],
+                    opacity: [0, 0.5, 1, 0.5, 0],
+                    scale: [0.9, 1, 1.1, 1, 0.9],
+                  }}
+                  transition={{
+                    duration: 8,
+                    ease: "easeInOut",
+                    repeat: Infinity,
+                  }}
+                  whileHover={{ scale: 1.1 }}
+                >
+                  <div className="text-sm font-bold text-white">600+</div>
+                  <div className="text-xs text-gray-400">Clients</div>
               </motion.div>
+
+
+
+
             </motion.div>
           </div>
         </div>
