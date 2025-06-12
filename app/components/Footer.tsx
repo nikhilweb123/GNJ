@@ -74,11 +74,11 @@ export default function Footer() {
               </div>
               <div>
                 <div className="text-sm text-gray-400 mb-1">HR Enquiry</div>
-                <div>+91 480 2733 999</div>
+                <div>+91 92382 68169</div>
               </div>
               <div>
                 <div className="text-sm text-gray-400 mb-1">Whatsapp (Sales)</div>
-                <div>+91 8606 483 399</div>
+                <div>+91 84464 19217</div>
               </div>
             </div>
           </div>
