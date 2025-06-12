@@ -14,7 +14,7 @@ export default function Footer() {
                 <motion.a
                   key={item}
                   href="#"
-                  className="block text-gray-400 hover:text-white transition-colors"
+                  className="block text-gray-400 hover:text-black transition-colors"
                   whileHover={{ x: 5 }}
                 >
                   {item}
@@ -30,7 +30,7 @@ export default function Footer() {
                 <motion.a
                   key={item}
                   href="#"
-                  className="block text-gray-400 hover:text-white transition-colors"
+                  className="block text-gray-400 hover:text-black transition-colors"
                   whileHover={{ x: 5 }}
                 >
                   {item}
@@ -47,7 +47,7 @@ export default function Footer() {
                   <motion.a
                     key={item}
                     href="#"
-                    className="block text-gray-400 hover:text-white transition-colors"
+                    className="block text-gray-400 hover:text-black transition-colors"
                     whileHover={{ x: 5 }}
                   >
                     {item}
@@ -72,14 +72,7 @@ export default function Footer() {
                 <div className="text-sm text-gray-400 mb-1">Email</div>
                 <div>info@webandcrafts.com</div>
               </div>
-              <div>
-                <div className="text-sm text-gray-400 mb-1">HR Enquiry</div>
-                <div>+91 92382 68169</div>
-              </div>
-              <div>
-                <div className="text-sm text-gray-400 mb-1">Whatsapp (Sales)</div>
-                <div>+91 84464 19217</div>
-              </div>
+              
             </div>
           </div>
         </div>
