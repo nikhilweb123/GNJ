@@ -70,7 +70,7 @@ export default function Footer() {
               </div>
               <div>
                 <div className="text-sm text-gray-400 mb-1">Email</div>
-                <div>info@webandcrafts.com</div>
+                <div>support@gnjworldwide.com</div>
               </div>
               
             </div>
