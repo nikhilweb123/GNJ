@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react"
 import { motion, useScroll, useTransform, useInView } from "framer-motion"
 import { Menu, Phone, Search, Bookmark, ArrowRight } from "lucide-react"
 import { useTextShadowAnimation, useRotationAnimation } from "./hooks/useAnimation"
+import Link from "next/link"
 
 export default function Component() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -673,18 +674,20 @@ export default function Component() {
                 In a world brimming with possibilities, we sprouted, seizing our destiny to create an extraordinary
                 narrative - a tale that encapsulates laughter, tears, challenges, and triumphs.
               </p>
-              <motion.button
-                className="inline-flex items-center space-x-2 text-lg border border-white/30 px-6 py-3 rounded-lg"
-                whileHover={{
-                  scale: 1.05,
-                  boxShadow: "0 10px 25px rgba(255, 255, 255, 0.1)",
-                  borderColor: "rgba(255, 255, 255, 0.8)",
-                }}
-                transition={{ type: "spring", stiffness: 400 }}
-              >
-                <span>About us</span>
-                <ArrowRight className="w-4 h-4" />
-              </motion.button>
+              <Link href="/about">
+                <motion.button
+                  className="inline-flex items-center space-x-2 text-lg border border-white/30 px-6 py-3 rounded-lg"
+                  whileHover={{
+                    scale: 1.05,
+                    boxShadow: "0 10px 25px rgba(255, 255, 255, 0.1)",
+                    borderColor: "rgba(255, 255, 255, 0.8)",
+                  }}
+                  transition={{ type: "spring", stiffness: 400 }}
+                >
+                  <span>About us</span>
+                  <ArrowRight className="w-4 h-4" />
+                </motion.button>
+              </Link>
             </motion.div>
 
             <motion.div
