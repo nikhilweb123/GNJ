@@ -9,7 +9,6 @@ export default function Header() {
 
   const menuItems = [
     { name: "Services", link: "/services" },
-    { name: "Solutions", link: "/solutions" },
     { name: "Industries", link: "/industries" },
     { name: "Works", link: "/works" },
     { name: "About", link: "/about" },
@@ -31,7 +30,7 @@ export default function Header() {
           </motion.div>
         </a>
           
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-14">
             {menuItems.map((item) => (
               <motion.a
                 key={item.name}
