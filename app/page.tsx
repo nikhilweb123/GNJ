@@ -47,52 +47,52 @@ export default function Component() {
       title: "Software Development",
       description:
         "Custom software solutions tailored to your business needs with cutting-edge technologies and best practices.",
-      gradient: "from-purple-400 via-pink-400 to-blue-400",
+      image: "/Software Development.png",
     },
     {
       title: "Web Development",
       description: "Responsive and dynamic web applications built with modern frameworks for optimal performance and user experience",
-      gradient: "from-blue-400 via-cyan-400 to-teal-400",
+      image: "/Web Development.png",
     },
     {
       title: "IT Support",
       description: "Comprehensive technical assistance and maintenance services to keep your systems running smoothly",
-      gradient: "from-teal-400 via-green-400 to-cyan-400",
+      image: "/It support.png",
     },
     {
       title: "UI/UX Design",
       description: "Creating intuitive and engaging user interfaces that enhance user satisfaction and drive conversion",
-      gradient: "from-purple-400 via-blue-400 to-cyan-400",
+      image: "/UIUX Design.png",
     },
     {
       title: "Mobile App Development",
       description: "Native and cross-platform mobile solutions that connect users to your brand anywhere, anytime",
-      gradient: "from-pink-400 via-purple-400 to-blue-400",
+      image: "/Mobile App Development.png",
     },
     {
       title: "Integrations",
       description: "Seamless integration of third-party services and APIs to enhance functionality and streamline workflows",
-      gradient: "from-cyan-400 via-blue-400 to-purple-400",
+      image: "/Integrations.png",
     },
     {
       title: "Cloud Solutions",
       description: "Scalable and secure cloud infrastructure setup and management for improved efficiency and reduced costs",
-      gradient: "from-purple-400 via-pink-400 to-blue-400",
+      image: "/Cloud Solutions.png",
     },
     {
       title: "IT Infrastructure",
       description: "Design and implementation of robust IT infrastructure tailored to your organization's specific requirements",
-      gradient: "from-blue-400 via-cyan-400 to-teal-400",
+      image: "/IT Infrastructure.jpg",
     },
     {
       title: "Cyber Security",
       description: "Comprehensive security solutions to protect your digital assets from threats and ensure data integrity",
-      gradient: "from-teal-400 via-green-400 to-cyan-400",
+      image: "/Cyber Security.png",
     },
     {
       title: "Mobile Application Service",
       description: "Ongoing support, maintenance, and enhancement services for your mobile applications",
-      gradient: "from-purple-400 via-blue-400 to-cyan-400",
+      image: "/Mobile Application Service.jpg",
     },
   ]
 
@@ -269,42 +269,59 @@ export default function Component() {
         />
       </motion.div>
 
-      {/* Mission Statement Section */}
+      
       <AnimatedSection delay={0.2}>
         <div className="max-w-6xl mx-auto text-center px-6 py-32">
           <motion.h2
             className="text-5xl md:text-6xl font-light leading-tight"
-            initial={{ opacity: 0, y: 50 }}
-            animate={{
-              opacity: [0, 1],
-              transition: { duration: 1.2 }
-            }}
+            initial={{ opacity: 0, y: 80 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
+            transition={{
+              type: "spring",
+              stiffness: 100,
+              damping: 20,
+              duration: 1.2,
+            }}
+            viewport={{ once: false, amount: 0.3 }} // triggers when 30% of element is in view
           >
             We believe in a world where{" "}
             <motion.span
               className="text-gray-400"
-              animate={{
+              whileInView={{
                 color: ["#9CA3AF", "#FFFFFF", "#9CA3AF"],
-                transition: { duration: 3, repeat: Number.POSITIVE_INFINITY }
               }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                repeatType: "mirror",
+                ease: "easeInOut",
+              }}
+              viewport={{ once: false }}
             >
               technology fosters
             </motion.span>{" "}
             your everyday experiences.{" "}
             <motion.span
               className="text-gray-400"
-              animate={{
+              whileInView={{
                 color: ["#9CA3AF", "#FFFFFF", "#9CA3AF"],
-                transition: { duration: 3, repeat: Number.POSITIVE_INFINITY, delay: 1.5 }
               }}
+              transition={{
+                duration: 4,
+                repeat: Infinity,
+                repeatType: "mirror",
+                ease: "easeInOut",
+                delay: 2,
+              }}
+              viewport={{ once: false }}
             >
               And our mission is to make it happen!
             </motion.span>
           </motion.h2>
         </div>
       </AnimatedSection>
+
+
 
       {/* Design Section */}
       <AnimatedSection delay={0.1}>
@@ -542,7 +559,7 @@ export default function Component() {
                 }
               }}
             >
-              Create
+              Develop
             </motion.h2>
 
             {/* Floating Creative Elements */}
@@ -821,11 +838,11 @@ export default function Component() {
                 viewport={{ once: true }}
                 whileHover={{ y: -10 }}
               >
-                <div className="relative overflow-hidden rounded-xl">
-                  <motion.div
-                    className={`h-48 bg-gradient-to-br ${service.gradient} opacity-80`}
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.3 }}
+                <div className="relative overflow-hidden rounded-xl h-48 flex items-center justify-center bg-black/10">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="object-cover w-full h-full"
                   />
                   <div className="absolute inset-0 bg-black/20" />
                 </div>
