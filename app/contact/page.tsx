@@ -410,18 +410,40 @@ export default function ContactPage() {
           </motion.h2>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="aspect-video bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center"
-          >
-            <div className="text-center">
-              <MapPin className="w-16 h-16 text-white mx-auto mb-4" />
-              <p className="text-2xl font-light text-white mb-2">Interactive Map</p>
-              <p className="text-blue-100">123 Tech Street, Silicon Valley, CA 94000</p>
-            </div>
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              className="aspect-auto bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 flex flex-col items-center justify-center space-y-6"
+            >
+              <div className="text-center">
+                <MapPin className="w-16 h-16 text-white mx-auto mb-4" />
+                <p className="text-2xl font-light text-white mb-2">Our Office</p>
+                <p className="text-blue-100">
+                  10th Floor, BKC Complex, Awfis, East Bandra, Mumbai, 400051 Maharashtra, India
+                </p>
+              </div>
+
+              <motion.div
+                initial={{ scale: 0.95, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.8, ease: 'easeOut' }}
+                viewport={{ once: true }}
+                className="w-full h-[400px] rounded-xl overflow-hidden shadow-2xl border-4 border-white/20 hover:border-blue-400 transition-all duration-500"
+              >
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.2822895015856!2d72.86728767520453!3d19.391423043217717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c7a5466a7c77%3A0x42940cb5cf8f650a!2sAwfis%20Bandra%20Kurla%20Complex%20Mumbai!5e0!3m2!1sen!2sin!4v1719300344667!5m2!1sen!2sin"
+                  width="100%"
+                  height="100%"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="border-0 w-full h-full"
+                  style={{ filter: 'brightness(0.95) saturate(1.1)' }}
+                ></iframe>
+              </motion.div>
           </motion.div>
+
+
         </div>
       </section>
 

@@ -178,10 +178,15 @@ export default function CareersPage() {
             personally and professionally.
           </motion.p>
 
-          <div className="aspect-video relative mb-16">
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center">
-              <p className="text-2xl font-light">Company Culture Video</p>
-            </div>
+          <div className="aspect-video relative mb-16 overflow-hidden rounded-2xl">
+            <iframe
+              className="absolute inset-0 w-full h-full pointer-events-none"
+              src="https://www.youtube.com/embed/0Gs3g24iuS8?autoplay=1&mute=1&loop=1&controls=0&modestbranding=1&rel=0&fs=0&disablekb=0&iv_load_policy=3"
+              title="Company Culture Video"
+              allow="autoplay; encrypted-media"
+              allowFullScreen
+              style={{ border: 0 }}
+            />
           </div>
 
           <motion.h3
