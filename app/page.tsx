@@ -97,7 +97,7 @@ export default function Component() {
   ]
 
   const clients = [
-    "IKEA",
+    "ABCD",
     "Star",
     "LuLu GROUP INTERNATIONAL",
     "GARMIN",
