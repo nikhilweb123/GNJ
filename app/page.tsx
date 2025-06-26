@@ -936,30 +936,6 @@ export default function Component() {
               </motion.div>
             ))}
           </div>
-
-          <motion.div
-            className="text-center"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{
-              opacity: [0, 1],
-              y: [0, 0],
-              transition: { duration: 1 }
-            }}
-            viewport={{ once: true }}
-          >
-            <motion.button
-              className="inline-flex items-center space-x-2 text-lg border border-white/30 px-8 py-4 rounded-lg"
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0 10px 25px rgba(255, 255, 255, 0.1)",
-                borderColor: "rgba(255, 255, 255, 0.8)",
-              }}
-              transition={{ type: "spring", stiffness: 400 }}
-            >
-              <span>View all clients</span>
-              <ArrowRight className="w-4 h-4" />
-            </motion.button>
-          </motion.div>
         </div>
       </AnimatedSection>
 
@@ -980,24 +956,19 @@ export default function Component() {
               <p className="text-xl text-gray-400">It takes less than a minute of your time.</p>
             </motion.div>
 
-            <motion.button
-              className="mt-8 lg:mt-0 inline-flex items-center space-x-2 text-lg border border-white/30 px-8 py-4 rounded-lg"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{
-                opacity: [0, 1],
-                x: [0, 0],
-                transition: { duration: 1 }
-              }}
-              viewport={{ once: true }}
+            <motion.a
+              href="/contact"
+              className="inline-flex items-center space-x-2 text-lg border border-white/30 px-8 py-4 rounded-lg hover:bg-white hover:text-black transition-colors font-medium"
               whileHover={{
                 scale: 1.05,
                 boxShadow: "0 10px 25px rgba(255, 255, 255, 0.1)",
                 borderColor: "rgba(255, 255, 255, 0.8)",
               }}
+              transition={{ type: "spring", stiffness: 400 }}
             >
-              <span>Request a quote</span>
+              Request a quote
               <ArrowRight className="w-4 h-4" />
-            </motion.button>
+            </motion.a>
           </div>
         </div>
       </AnimatedSection>
