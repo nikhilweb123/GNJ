@@ -248,7 +248,7 @@ export default function Component() {
 
       
         <AnimatedSection delay={0.2}>
-          <div className="max-w-6xl mx-auto text-center px-6 py-32">
+          <div className="max-w-6xl mx-auto text-center px-6 py-32 bg-gray-700">
             <motion.h2
               className="text-5xl md:text-6xl font-light leading-tight"
               initial={{ opacity: 0, y: 80 }}
