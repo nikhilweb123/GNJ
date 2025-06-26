@@ -22,22 +22,22 @@ const benefits = [
   {
     icon: Heart,
     title: "Health & Wellness",
-    description: "Comprehensive health insurance, wellness programs, and gym memberships.",
+    description: "Comprehensive health insurance, wellness programs, and medical checkups.",
   },
   {
     icon: Coffee,
     title: "Work-Life Balance",
-    description: "Flexible working hours and remote work options to suit your lifestyle.",
+    description: "Flexible working hours, remote work options, and festival holidays.",
   },
   {
     icon: Clock,
     title: "Paid Time Off",
-    description: "Generous vacation policy, paid holidays, and parental leave.",
+    description: "Generous leave policy, paid holidays, and parental leave.",
   },
   {
     icon: Globe,
-    title: "Remote First",
-    description: "Work from anywhere with our distributed team across the globe.",
+    title: "Remote & Hybrid Work",
+    description: "Work from anywhere in India or from our Mumbai office.",
   },
   {
     icon: Zap,
@@ -47,55 +47,55 @@ const benefits = [
   {
     icon: Award,
     title: "Recognition",
-    description: "Performance bonuses and peer recognition programs.",
+    description: "Performance bonuses, spot awards, and employee of the month.",
   },
   {
     icon: BookOpen,
     title: "Learning Budget",
-    description: "Annual budget for courses, books, and conferences.",
+    description: "Annual budget for courses, certifications, and conferences.",
   },
   {
     icon: Users,
     title: "Team Events",
-    description: "Regular team retreats and social activities.",
+    description: "Regular team outings, festival celebrations, and social activities.",
   },
 ]
 
 const jobOpenings = [
   {
-    title: "Senior Frontend Developer",
+    title: "Frontend Developer (React/Next.js)",
     department: "Engineering",
-    location: "Remote",
+    location: "Mumbai / Remote (India)",
     type: "Full-time",
     description:
-      "We're looking for an experienced frontend developer with expertise in React, Next.js, and modern JavaScript frameworks.",
+      "We're looking for a frontend developer with expertise in React, Next.js, and modern JavaScript frameworks.",
   },
   {
-    title: "UX/UI Designer",
+    title: "UI/UX Designer",
     department: "Design",
-    location: "Remote",
+    location: "Mumbai / Remote (India)",
     type: "Full-time",
     description: "Join our design team to create beautiful, intuitive interfaces for our clients' digital products.",
   },
   {
     title: "DevOps Engineer",
     department: "Engineering",
-    location: "Remote",
+    location: "Mumbai / Remote (India)",
     type: "Full-time",
     description: "Help us build and maintain our cloud infrastructure and CI/CD pipelines.",
   },
   {
     title: "Product Manager",
     department: "Product",
-    location: "Remote",
+    location: "Mumbai / Remote (India)",
     type: "Full-time",
     description:
       "Lead product development from conception to launch, working closely with design and engineering teams.",
   },
   {
-    title: "Marketing Specialist",
+    title: "Digital Marketing Specialist",
     department: "Marketing",
-    location: "Remote",
+    location: "Mumbai / Remote (India)",
     type: "Full-time",
     description: "Drive our marketing efforts across digital channels to increase brand awareness and lead generation.",
   },
@@ -103,22 +103,22 @@ const jobOpenings = [
 
 const testimonials = [
   {
-    quote: "Working here has been the highlight of my career. The culture of innovation and support is unmatched.",
-    name: "Alex Rivera",
-    role: "Senior Developer",
+    quote: "GNJ has given me the platform to grow my skills and work on exciting projects for clients across India and abroad.",
+    name: "Priya Sharma",
+    role: "Frontend Developer",
     image: "/placeholder.svg?height=100&width=100",
   },
   {
     quote:
-      "I've grown more in my two years here than in my previous decade of work. The learning opportunities are endless.",
-    name: "Jordan Taylor",
-    role: "Product Designer",
+      "The work culture here is supportive and inclusive. I love the festival celebrations and team outings!",
+    name: "Rahul Verma",
+    role: "UI/UX Designer",
     image: "/placeholder.svg?height=100&width=100",
   },
   {
-    quote: "The flexibility and trust given to employees makes this the best place I've ever worked.",
-    name: "Morgan Chen",
-    role: "Project Manager",
+    quote: "Flexible work options and a focus on learning make GNJ a great place to build your career in tech.",
+    name: "Sneha Patel",
+    role: "DevOps Engineer",
     image: "/placeholder.svg?height=100&width=100",
   },
 ]
@@ -418,7 +418,14 @@ export default function CareersPage() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
           >
+            <a href="/contact">
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors mb-2 sm:mb-0">Contact Us</button>
+            </a>
+            <a href="/works">
+              <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-full font-medium hover:bg-blue-600 hover:text-white transition-colors">Our Work</button>
+            </a>
             <button className="bg-white text-black px-8 py-3 rounded-full font-medium hover:bg-gray-200 transition-colors">
               Submit Your Resume
             </button>
