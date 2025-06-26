@@ -247,56 +247,57 @@ export default function Component() {
       </motion.div>
 
       
-      <AnimatedSection delay={0.2}>
-        <div className="max-w-6xl mx-auto text-center px-6 py-32">
-          <motion.h2
-            className="text-5xl md:text-6xl font-light leading-tight"
-            initial={{ opacity: 0, y: 80 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              type: "spring",
-              stiffness: 100,
-              damping: 20,
-              duration: 1.2,
-            }}
-            viewport={{ once: false, amount: 0.3 }} // triggers when 30% of element is in view
-          >
-            We believe in a world where{" "}
-            <motion.span
-              className="text-gray-400"
-              whileInView={{
-                color: ["#9CA3AF", "#FFFFFF", "#9CA3AF"],
-              }}
+        <AnimatedSection delay={0.2}>
+          <div className="max-w-6xl mx-auto text-center px-6 py-32">
+            <motion.h2
+              className="text-5xl md:text-6xl font-light leading-tight"
+              initial={{ opacity: 0, y: 80 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 4,
-                repeat: Infinity,
-                repeatType: "mirror",
-                ease: "easeInOut",
+                type: "spring",
+                stiffness: 100,
+                damping: 20,
+                duration: 1.2,
               }}
-              viewport={{ once: false }}
+              viewport={{ once: false, amount: 0.3 }}
             >
-              technology fosters
-            </motion.span>{" "}
-            your everyday experiences.{" "}
-            <motion.span
-              className="text-gray-400"
-              whileInView={{
-                color: ["#9CA3AF", "#FFFFFF", "#9CA3AF"],
-              }}
-              transition={{
-                duration: 4,
-                repeat: Infinity,
-                repeatType: "mirror",
-                ease: "easeInOut",
-                delay: 2,
-              }}
-              viewport={{ once: false }}
-            >
-              And our mission is to make it happen!
-            </motion.span>
-          </motion.h2>
-        </div>
-      </AnimatedSection>
+              We believe in a future where{" "}
+              <motion.span
+                className="text-gray-400"
+                whileInView={{
+                  color: ["#9CA3AF", "#FFFFFF", "#9CA3AF"],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  repeatType: "mirror",
+                  ease: "easeInOut",
+                }}
+                viewport={{ once: false }}
+              >
+                technology empowers
+              </motion.span>{" "}
+              meaningful human experiences.{" "}
+              <motion.span
+                className="text-gray-400"
+                whileInView={{
+                  color: ["#9CA3AF", "#FFFFFF", "#9CA3AF"],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  repeatType: "mirror",
+                  ease: "easeInOut",
+                  delay: 2,
+                }}
+                viewport={{ once: false }}
+              >
+                And we're here to build that future — one line of code at a time.
+              </motion.span>
+            </motion.h2>
+          </div>
+        </AnimatedSection>
+
 
 
 
