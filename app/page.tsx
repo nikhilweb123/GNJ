@@ -202,22 +202,24 @@ export default function Component() {
             <span className="text-gray-400">Team GNJ!</span>
           </motion.h1>
 
-          <motion.button
-            className="inline-flex items-center space-x-2 text-lg hover:text-gray-300 transition-colors border border-white/30 px-6 py-3 rounded-lg"
-            initial={{ opacity: 0 }}
-            animate={{
-              opacity: [0, 1],
-              transition: { duration: 1, delay: 1.2 }
-            }}
-            whileHover={{
-              scale: 1.05,
-              boxShadow: "0 10px 25px rgba(255, 255, 255, 0.1)",
-              borderColor: "rgba(255, 255, 255, 0.8)",
-            }}
-          >
-            <span>Read more</span>
-            <ArrowRight className="w-4 h-4" />
-          </motion.button>
+          <Link href="/about">
+            <motion.button
+              className="inline-flex items-center space-x-2 text-lg hover:text-gray-300 transition-colors border border-white/30 px-6 py-3 rounded-lg"
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: [0, 1],
+                transition: { duration: 1, delay: 1.2 }
+              }}
+              whileHover={{
+                scale: 1.05,
+                boxShadow: "0 10px 25px rgba(255, 255, 255, 0.1)",
+                borderColor: "rgba(255, 255, 255, 0.8)",
+              }}
+            >
+              <span>Read more</span>
+              <ArrowRight className="w-4 h-4" />
+            </motion.button>
+          </Link>
         </div>
 
         {/* Next Story Reel */}
