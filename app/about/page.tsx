@@ -94,49 +94,64 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Learn about our journey, our values, and the team behind GNJ's success in delivering innovative technology
-            solutions.
+            Traditional information technology management function (or IT) should be the technology backbone that is responsible for the development, and management of digital and administrative solutions in a professional way. The technology backbone consists of all information technology systems and processes that support the running of the business's operations, through the management of end-user services, plus enterprise and business applications. It is where the essential business asset of a company resides, and the purpose is to provide operational efficiency to the company through reliability, security, and scalability. <a href="https://www.gnjworldwide.com" className="text-blue-400 underline ml-1" target="_blank" rel="noopener noreferrer">Visit our website</a>.
           </motion.p>
         </div>
       </section>
 
-      {/* Story Section */}
+      {/* Company Facts Section */}
       <section className="py-16 border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <h2 className="text-4xl md:text-5xl font-light mb-6">Our Story</h2>
-              <p className="text-gray-400 text-lg mb-6">
-                Founded in 2016, GNJ began as a small team of passionate developers and designers who believed
-                technology could transform businesses. What started in a garage has grown into a leading technology
-                consultancy.
-              </p>
-              <p className="text-gray-400 text-lg mb-6">
-                We've helped hundreds of companies navigate digital transformation, from startups finding their footing
-                to enterprises scaling globally. Our approach combines technical expertise with deep business
-                understanding.
-              </p>
-              <p className="text-gray-400 text-lg">
-                Today, we're proud to be trusted partners to organizations across industries, helping them build the
-                future through innovative technology solutions.
-              </p>
-            </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              className="relative"
-            >
-              <div className="aspect-square bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl p-8 flex items-center justify-center">
-                <Globe className="w-32 h-32 text-white" />
+        <div className="max-w-4xl mx-auto px-6">
+          <motion.h2
+            className="text-3xl md:text-4xl font-light mb-8 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+          >
+            Company Information
+          </motion.h2>
+          <div className="grid md:grid-cols-2 gap-8 bg-gray-900 rounded-2xl p-8 mb-10">
+            <div>
+              <div className="mb-4">
+                <span className="font-semibold text-blue-400">Website:</span> <a href="https://www.gnjworldwide.com" className="text-blue-300 underline" target="_blank" rel="noopener noreferrer">www.gnjworldwide.com</a>
               </div>
-            </motion.div>
+              <div className="mb-4">
+                <span className="font-semibold text-blue-400">Industry:</span> <span className="text-gray-200">IT Services and IT Consulting</span>
+              </div>
+              <div className="mb-4">
+                <span className="font-semibold text-blue-400">Company size:</span> <span className="text-gray-200">2-10 employees</span>
+              </div>
+              <div className="mb-4">
+                <span className="font-semibold text-blue-400">Headquarters:</span> <span className="text-gray-200">Mumbai, Maharashtra</span>
+              </div>
+              <div className="mb-4">
+                <span className="font-semibold text-blue-400">Type:</span> <span className="text-gray-200">Public Company</span>
+              </div>
+              <div className="mb-4">
+                <span className="font-semibold text-blue-400">Founded:</span> <span className="text-gray-200">2023</span>
+              </div>
+            </div>
+            <div>
+              <div className="mb-4">
+                <span className="font-semibold text-blue-400">Specialties:</span>
+                <ul className="list-disc pl-6 text-gray-200 mt-2">
+                  <li><a href="/contact" className="text-blue-400 hover:underline">IT Developments</a></li>
+                  <li><a href="/contact" className="text-blue-400 hover:underline">Professional services</a></li>
+                  <li><a href="/contact" className="text-blue-400 hover:underline">Data Entrys</a></li>
+                  <li><a href="/contact" className="text-blue-400 hover:underline">IT Hardware Solutions</a></li>
+                  <li><a href="/contact" className="text-blue-400 hover:underline">IT Rental Service</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+            <a href="/contact">
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors">Contact Us</button>
+            </a>
+            <a href="/works">
+              <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-full font-medium hover:bg-blue-600 hover:text-white transition-colors">Our Work</button>
+            </a>
           </div>
         </div>
       </section>
@@ -187,43 +202,6 @@ export default function AboutPage() {
               <motion.div key={index} variants={fadeInUp} className="text-center">
                 <div className="text-4xl md:text-5xl font-light text-blue-400 mb-2">{stat.number}</div>
                 <div className="text-gray-400 text-sm uppercase tracking-wider">{stat.label}</div>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-16 border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.h2
-            className="text-4xl md:text-5xl font-light mb-16 text-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            Meet Our Team
-          </motion.h2>
-          <motion.div
-            className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-          >
-            {team.map((member, index) => (
-              <motion.div key={index} variants={fadeInUp} className="group">
-                <div className="aspect-square bg-gray-800 rounded-2xl mb-6 overflow-hidden">
-                  <img
-                    src={member.image || "/placeholder.svg"}
-                    alt={member.name}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
-                <p className="text-blue-400 mb-3">{member.role}</p>
-                <p className="text-gray-400 text-sm">{member.bio}</p>
               </motion.div>
             ))}
           </motion.div>
