@@ -1,6 +1,7 @@
 "use client"
 import { motion } from "framer-motion"
 import { ArrowRight, CheckCircle, Users, Clock, Award, Zap } from "lucide-react"
+import Link from "next/link"
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -22,6 +23,7 @@ const services = [
     description:
       "Custom software solutions tailored to your business needs with cutting-edge technologies and best practices.",
     gradient: "from-purple-400 via-pink-400 to-blue-400",
+    link: "/software-development",
   },
   {
     title: "Web Development",
@@ -181,15 +183,23 @@ export default function Services() {
                   <p className="text-gray-400 mb-6 group-hover:text-gray-300 transition-colors leading-relaxed">
                     {service.description}
                   </p>
-
-                  <div className="flex items-center text-blue-400 group-hover:text-blue-300 transition-colors">
-                    <span className="text-sm font-medium">Learn More</span>
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </div>
                 </div>
               </motion.div>
             ))}
           </motion.div>
+          {/* Contact Us Button */}
+          <div className="flex justify-center mt-12">
+            <Link href="/contact">
+              <motion.button
+                className="inline-flex items-center space-x-2 text-lg border border-blue-600 text-blue-600 px-8 py-4 rounded-lg hover:bg-blue-600 hover:text-white transition-colors"
+                whileHover={{ scale: 1.05 }}
+                transition={{ type: "spring", stiffness: 400 }}
+              >
+                <span>Contact Us</span>
+                <ArrowRight className="w-4 h-4" />
+              </motion.button>
+            </Link>
+          </div>
         </div>
       </section>
 
