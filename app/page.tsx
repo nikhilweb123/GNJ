@@ -665,8 +665,10 @@ export default function Component() {
             >
               <h2 className="text-6xl md:text-7xl font-light mb-8">Our Story</h2>
               <p className="text-xl text-gray-300 leading-relaxed mb-8">
-                In a world brimming with possibilities, we sprouted, seizing our destiny to create an extraordinary
-                narrative - a tale that encapsulates laughter, tears, challenges, and triumphs.
+                GNJ was founded in Mumbai with a vision to empower businesses through innovative technology solutions. 
+                Starting as a small team of passionate IT professionals, we have grown into a trusted partner for organizations
+                across India and beyond. Our journey is defined by a commitment to reliability, security, and operational excellence, 
+                helping clients achieve their goals in a rapidly evolving digital landscape.
               </p>
               <Link href="/about">
                 <motion.button
