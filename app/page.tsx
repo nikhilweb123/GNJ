@@ -432,7 +432,7 @@ export default function Component() {
 
       {/* Build Section */}
       <AnimatedSection delay={0.2}>
-        <div className="min-h-screen flex items-center justify-center px-6 relative">
+        <div className="min-h-screen flex items-center justify-center px-6 relative bg-gray-900">
           <div className="max-w-6xl mx-auto text-center relative">
             <motion.h2
               className="text-8xl md:text-9xl lg:text-[12rem] font-light text-white"
@@ -591,7 +591,7 @@ export default function Component() {
 
       {/* Innovate Section */}
       <AnimatedSection delay={0.4}>
-        <div className="min-h-screen flex items-center justify-center px-6 relative">
+        <div className="min-h-screen flex items-center justify-center px-6 relative bg-gray-900">
           <div className="max-w-6xl mx-auto text-center relative">
             <motion.h2
               className="text-7xl md:text-8xl lg:text-[10rem] font-light text-white"
