@@ -86,7 +86,7 @@ export default function Component() {
     },
     {
       title: "Cyber Security",
-      description: "Comprehensive security solutions to protect your digital assets from threats and ensure data integrity",
+      description: "End-to-end digital defense systems designed to safeguard your assets, and maintain uncompromised data integrity across all platforms.",
       image: "/Cyber Security.png",
     },
     {
