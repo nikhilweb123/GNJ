@@ -221,31 +221,6 @@ export default function Component() {
             </motion.button>
           </Link>
         </div>
-
-        {/* Next Story Reel */}
-        <motion.div
-          className="absolute bottom-8 right-8 bg-white/10 backdrop-blur-sm rounded-lg p-4"
-          initial={{ opacity: 0, x: 50 }}
-          animate={{
-            opacity: [0, 1],
-            x: [50, 0],
-            transition: { duration: 1, delay: 1.5 }
-          }}
-          whileHover={{ scale: 1.05 }}
-        >
-          <div className="text-sm text-gray-400 mb-2">Next</div>
-          <div className="font-semibold">Story Reel</div>
-          <div className="flex space-x-1 mt-2">
-            {[...Array(5)].map((_, i) => (
-              <motion.div
-                key={i}
-                className={`w-8 h-1 rounded ${i === 0 ? "bg-white" : "bg-gray-600"}`}
-                animate={i === 0 ? { scaleX: [1, 0.5, 1] } : {}}
-                transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
-              />
-            ))}
-          </div>
-        </motion.div>
       </motion.section>
 
       {/* Animated Elements */}
