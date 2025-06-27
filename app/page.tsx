@@ -91,7 +91,7 @@ export default function Component() {
     },
     {
       title: "Mobile Application Service",
-      description: "Ongoing support, maintenance, and enhancement services for your mobile applications",
+      description: "Continuous support, upgrades, and optimizations to keep your app smooth, secure, and ahead of the curve.",
       image: "/Mobile Application Service.jpg",
     },
   ]
