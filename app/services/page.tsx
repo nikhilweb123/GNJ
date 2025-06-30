@@ -76,6 +76,7 @@ const services = [
     description:
       "Comprehensive security solutions to protect your digital assets from threats and ensure data integrity",
     gradient: "from-teal-400 via-green-400 to-cyan-400",
+    link: "/Cyber-Security",
   },
   {
     title: "Mobile Application Service",
