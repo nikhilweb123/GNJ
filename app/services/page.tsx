@@ -42,6 +42,7 @@ const services = [
     title: "UI/UX Design",
     description: "Creating intuitive and engaging user interfaces that enhance user satisfaction and drive conversion",
     gradient: "from-purple-400 via-blue-400 to-cyan-400",
+    link: "/UIUX-Design",
   },
   {
     title: "Mobile App Development",
