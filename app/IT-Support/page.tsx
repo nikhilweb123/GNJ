@@ -8,7 +8,7 @@ export default function ITSupport() {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
-      <section className="pt-24 pb-16">
+      <section className="pt-28 pb-19">
         <div className="max-w-7xl mx-auto px-6">
           <motion.h1
             className="text-5xl md:text-6xl font-light mb-6"
