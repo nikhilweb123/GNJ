@@ -69,6 +69,7 @@ const services = [
     description:
       "Design and implementation of robust IT infrastructure tailored to your organization's specific requirements",
     gradient: "from-blue-400 via-cyan-400 to-teal-400",
+    link: "/IT-Infrastructure",
   },
   {
     title: "Cyber Security",

@@ -880,6 +880,8 @@ export default function Component() {
                       <span>Learn more</span>
                       <ArrowRight className="w-4 h-4" />
                     </motion.button>
+
+
                   ) : service.title === "Web Development" ? (
                     <motion.button
                       className="inline-flex items-center space-x-2 text-blue-600 font-medium"
@@ -890,6 +892,8 @@ export default function Component() {
                       <span>Learn more</span>
                       <ArrowRight className="w-4 h-4" />
                     </motion.button>
+
+
                   ) : service.title === "IT Support" ? (
                     <motion.button
                       className="inline-flex items-center space-x-2 text-blue-600 font-medium"
@@ -900,6 +904,7 @@ export default function Component() {
                       <span>Learn more</span>
                       <ArrowRight className="w-4 h-4" />
                     </motion.button>
+
                   ) : service.title === "UI/UX Design" ? (
                     <motion.button
                       className="inline-flex items-center space-x-2 text-blue-600 font-medium"
@@ -910,6 +915,7 @@ export default function Component() {
                       <span>Learn more</span>
                       <ArrowRight className="w-4 h-4" />
                     </motion.button>
+
                   ) : service.title === "Mobile App Development" ? (
                     <motion.button
                       className="inline-flex items-center space-x-2 text-blue-600 font-medium"
@@ -920,6 +926,7 @@ export default function Component() {
                       <span>Learn more</span>
                       <ArrowRight className="w-4 h-4" />
                     </motion.button>
+
                   ) : service.title === "Cloud Solutions" ? (
                     <motion.button
                       className="inline-flex items-center space-x-2 text-blue-600 font-medium"
@@ -930,16 +937,28 @@ export default function Component() {
                       <span>Learn more</span>
                       <ArrowRight className="w-4 h-4" />
                     </motion.button>
+
+                  ) : service.title === "IT Infrastructure" ? (
+                    <motion.button
+                      className="inline-flex items-center space-x-2 text-blue-600 font-medium"
+                      whileHover={{ x: 5 }}
+                      transition={{ type: "spring", stiffness: 400 }}
+                      onClick={() => window.open('/IT-Infrastructure', '_blank')}
+                    >
+                      <span>Learn more</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </motion.button>
+
                   ) : service.title === "Integrations" ? (
-                      <motion.button
-                        className="inline-flex items-center space-x-2 text-blue-600 font-medium"
-                        whileHover={{ x: 5 }}
-                        transition={{ type: "spring", stiffness: 400 }}
-                        onClick={() => window.open('/Integrations', '_blank')}
-                      >
-                        <span>Learn more</span>
-                        <ArrowRight className="w-4 h-4" />
-                      </motion.button>
+                    <motion.button
+                      className="inline-flex items-center space-x-2 text-blue-600 font-medium"
+                      whileHover={{ x: 5 }}
+                      transition={{ type: "spring", stiffness: 400 }}
+                      onClick={() => window.open('/Integrations', '_blank')}
+                    >
+                      <span>Learn more</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </motion.button>
                   ) : (
                     <motion.button
                       className="inline-flex items-center space-x-2 text-blue-600 font-medium"
