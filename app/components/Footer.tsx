@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
+import Link from "next/link"
 
 export default function Footer() {
   return (
@@ -26,15 +27,22 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-6">Services</h3>
             <div className="space-y-4">
-              {["Branding", "Experience Design", "Technology", "Digital Marketing"].map((item) => (
-                <motion.a
-                  key={item}
-                  href="#"
-                  className="block text-gray-400 hover:text-black transition-colors"
-                  whileHover={{ x: 5 }}
-                >
-                  {item}
-                </motion.a>
+              {[
+                { name: "Software Development", href: "/software-development" },
+                { name: "Web Development", href: "/web-development" },
+                { name: "UI/UX Design", href: "/UIUX-Design" },
+                { name: "Cyber Security", href: "/Cyber-Security" },
+                { name: "Cloud Solutions", href: "/Cloud-Solutions" },
+                { name: "IT Support", href: "/IT-Support" },
+              ].map((item) => (
+                <Link key={item.name} href={item.href} passHref legacyBehavior>
+                  <motion.a
+                    className="block text-gray-400 hover:text-black transition-colors"
+                    whileHover={{ x: 6 }}
+                  >
+                    {item.name}
+                  </motion.a>
+                </Link>
               ))}
             </div>
           </div>
