@@ -114,6 +114,19 @@ export default function Component() {
     "LANDMARK Group",
   ]
 
+  const serviceRoutes: Record<string, string> = {
+    "Software Development": "/software-development",
+    "Web Development": "/web-development",
+    "IT Support": "/IT-Support",
+    "UI/UX Design": "/UIUX-Design",
+    "Mobile App Development": "/Mobile-App-Development",
+    "Integrations": "/Integrations",
+    "Cloud Solutions": "/Cloud-Solutions",
+    "IT Infrastructure": "/IT-Infrastructure",
+    "Cyber Security": "/Cyber-Security",
+    "Mobile Application Service": "/Mobile-Application-Service",
+  };
+
   return (
     <div ref={containerRef} className="bg-black text-white overflow-hidden">
       {/* Hero Section with Video Banner */}
@@ -870,114 +883,12 @@ export default function Component() {
                 <div className="mt-6">
                   <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
                   <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-                  {service.title === "Software Development" ? (
+                  {serviceRoutes[service.title] && (
                     <motion.button
                       className="inline-flex items-center space-x-2 text-blue-600 font-medium"
                       whileHover={{ x: 5 }}
                       transition={{ type: "spring", stiffness: 400 }}
-                      onClick={() => window.open('/software-development', '_blank')}
-                    >
-                      <span>Learn more</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </motion.button>
-
-
-                  ) : service.title === "Web Development" ? (
-                    <motion.button
-                      className="inline-flex items-center space-x-2 text-blue-600 font-medium"
-                      whileHover={{ x: 5 }}
-                      transition={{ type: "spring", stiffness: 400 }}
-                      onClick={() => window.open('/web-development', '_blank')}
-                    >
-                      <span>Learn more</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </motion.button>
-
-
-                  ) : service.title === "IT Support" ? (
-                    <motion.button
-                      className="inline-flex items-center space-x-2 text-blue-600 font-medium"
-                      whileHover={{ x: 5 }}
-                      transition={{ type: "spring", stiffness: 400 }}
-                      onClick={() => window.open('/IT-Support', '_blank')}
-                    >
-                      <span>Learn more</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </motion.button>
-
-                  ) : service.title === "UI/UX Design" ? (
-                    <motion.button
-                      className="inline-flex items-center space-x-2 text-blue-600 font-medium"
-                      whileHover={{ x: 5 }}
-                      transition={{ type: "spring", stiffness: 400 }}
-                      onClick={() => window.open('/UIUX-Design', '_blank')}
-                    >
-                      <span>Learn more</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </motion.button>
-
-                  ) : service.title === "Mobile App Development" ? (
-                    <motion.button
-                      className="inline-flex items-center space-x-2 text-blue-600 font-medium"
-                      whileHover={{ x: 5 }}
-                      transition={{ type: "spring", stiffness: 400 }}
-                      onClick={() => window.open('/Mobile-App-Development', '_blank')}
-                    >
-                      <span>Learn more</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </motion.button>
-
-                  ) : service.title === "Cloud Solutions" ? (
-                    <motion.button
-                      className="inline-flex items-center space-x-2 text-blue-600 font-medium"
-                      whileHover={{ x: 5 }}
-                      transition={{ type: "spring", stiffness: 400 }}
-                      onClick={() => window.open('/Cloud-Solutions', '_blank')}
-                    >
-                      <span>Learn more</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </motion.button>
-
-                  ) : service.title === "IT Infrastructure" ? (
-                    <motion.button
-                      className="inline-flex items-center space-x-2 text-blue-600 font-medium"
-                      whileHover={{ x: 5 }}
-                      transition={{ type: "spring", stiffness: 400 }}
-                      onClick={() => window.open('/IT-Infrastructure', '_blank')}
-                    >
-                      <span>Learn more</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </motion.button>
-
-                  ) : service.title === "Integrations" ? (
-                    <motion.button
-                      className="inline-flex items-center space-x-2 text-blue-600 font-medium"
-                      whileHover={{ x: 5 }}
-                      transition={{ type: "spring", stiffness: 400 }}
-                      onClick={() => window.open('/Integrations', '_blank')}
-                    >
-                      <span>Learn more</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </motion.button>
-
-                  ) : service.title === "Cyber Security" ? (
-                    <motion.button
-                      className="inline-flex items-center space-x-2 text-blue-600 font-medium"
-                      whileHover={{ x: 5 }}
-                      transition={{ type: "spring", stiffness: 400 }}
-                      onClick={() => window.open('/Cyber-Security', '_blank')}
-                    >
-                      <span>Learn more</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </motion.button>
-
-
-                  ) : (
-                    <motion.button
-                      className="inline-flex items-center space-x-2 text-blue-600 font-medium"
-                      whileHover={{ x: 5 }}
-                      transition={{ type: "spring", stiffness: 400 }}
-                      onClick={() => window.location.href = '/contact'}
+                      onClick={() => window.open(serviceRoutes[service.title], '_blank')}
                     >
                       <span>Learn more</span>
                       <ArrowRight className="w-4 h-4" />

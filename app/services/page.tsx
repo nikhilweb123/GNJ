@@ -82,6 +82,7 @@ const services = [
     title: "Mobile Application Service",
     description: "Ongoing support, maintenance, and enhancement services for your mobile applications",
     gradient: "from-purple-400 via-blue-400 to-cyan-400",
+    link: "/Mobile-Application-Service",
   },
 ]
 
