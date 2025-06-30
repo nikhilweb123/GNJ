@@ -11,15 +11,22 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-6">Company</h3>
             <div className="space-y-4">
-              {["About", "Services", "Industries", "Works", "Careers", "Contact"].map((item) => (
-                <motion.a
-                  key={item}
-                  href="#"
-                  className="block text-gray-400 hover:text-black transition-colors"
-                  whileHover={{ x: 5 }}
-                >
-                  {item}
-                </motion.a>
+              {[
+                { name: "About", href: "/about" },
+                { name: "Services", href: "/services" },
+                { name: "Industries", href: "/industries" },
+                { name: "Works", href: "/works" },
+                { name: "Careers", href: "/careers" },
+                { name: "Contact", href: "/contact" },
+              ].map((item) => (
+                <Link key={item.name} href={item.href} passHref legacyBehavior>
+                  <motion.a
+                    className="block text-gray-400 hover:text-black transition-colors"
+                    whileHover={{ x: 5 }}
+                  >
+                    {item.name}
+                  </motion.a>
+                </Link>
               ))}
             </div>
           </div>
@@ -29,11 +36,15 @@ export default function Footer() {
             <div className="space-y-4">
               {[
                 { name: "Software Development", href: "/software-development" },
-                { name: "Web Development", href: "/web-development" },
+                { name: "Web Development", href: "/web-Development" },
                 { name: "UI/UX Design", href: "/UIUX-Design" },
                 { name: "Cyber Security", href: "/Cyber-Security" },
                 { name: "Cloud Solutions", href: "/Cloud-Solutions" },
                 { name: "IT Support", href: "/IT-Support" },
+                { name: "Integrations", href: "/Integrations" },
+                { name: "IT Infrastructure", href: "/IT-Infrastructure" },
+                { name: "Mobile App Development", href: "/Mobile-App-Development" },
+                { name: "Mobile Application Service", href: "/Mobile-Application-Service" },
               ].map((item) => (
                 <Link key={item.name} href={item.href} passHref legacyBehavior>
                   <motion.a
