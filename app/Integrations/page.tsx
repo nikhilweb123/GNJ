@@ -16,7 +16,7 @@ export default function Integrations() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            Integration Services
+Integration Services
           </motion.h1>
           <motion.h2
             className="text-2xl md:text-3xl font-light mb-8 text-blue-400"
@@ -24,7 +24,7 @@ export default function Integrations() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            Seamless Connectivity for Scalable Business Growth
+Seamless Connectivity for Scalable Business Growth
           </motion.h2>
           <motion.p
             className="text-xl text-gray-400 mb-12 max-w-4xl"
@@ -32,7 +32,7 @@ export default function Integrations() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            At GNJ Worldwide, our Integration Services are designed to help businesses unify their digital ecosystem, streamline operations, and accelerate innovation. Whether you are integrating software applications, cloud platforms, or third-party tools, we ensure your systems work together flawlessly — enabling efficiency, visibility, and control across your entire infrastructure.
+At GNJ Worldwide, our Integration Services are designed to help businesses unify their digital ecosystem, streamline operations, and accelerate innovation. Whether you are integrating software applications, cloud platforms, or third-party tools, we ensure your systems work together flawlessly — enabling efficiency, visibility, and control across your entire infrastructure.
           </motion.p>
         </div>
       </section>
@@ -47,7 +47,7 @@ export default function Integrations() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            Our Integration Capabilities
+Our Integration Capabilities
           </motion.h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <motion.div className="bg-gray-800 rounded-2xl p-8 shadow-md flex flex-col items-start" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
@@ -89,7 +89,7 @@ export default function Integrations() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            Why Choose GNJ Worldwide?
+Why Choose GNJ Worldwide?
           </motion.h2>
           <div className="grid gap-6 max-w-3xl mx-auto">
             {["Custom-Built Integration Solutions tailored to your business needs",
@@ -124,7 +124,7 @@ export default function Integrations() {
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
           >
-            Industries We Serve
+Industries We Serve
           </motion.h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
@@ -172,7 +172,7 @@ export default function Integrations() {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            Unlock the full potential of your technology investments. Contact GNJ Worldwide today to explore how our Integration Services can transform your operations and drive digital success.
+Unlock the full potential of your technology investments. Contact GNJ Worldwide today to explore how our Integration Services can transform your operations and drive digital success.
           </motion.p>
           <Link href="/contact">
             <motion.button

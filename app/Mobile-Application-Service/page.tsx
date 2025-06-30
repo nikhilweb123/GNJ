@@ -187,7 +187,7 @@ export default function MobileApplicationService() {
                 >
                   {IconComponent && <IconComponent className="w-8 h-8 text-blue-400 mb-4" />}
                   <h3 className="text-xl font-semibold mb-2 text-blue-400">{industry.name}</h3>
-                </motion.div>
+            </motion.div>
               )
             })}
           </div>

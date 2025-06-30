@@ -273,80 +273,13 @@ export default function CareersPage() {
       {/* Open Positions Section */}
       <section className="py-16 border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-6">
-          <motion.h2
-            className="text-4xl md:text-5xl font-light mb-6 text-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            Open Positions
-          </motion.h2>
-          <motion.p
-            className="text-xl text-gray-400 mb-12 text-center max-w-3xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            viewport={{ once: true }}
-          >
-            Find your next career opportunity and join our growing team.
-          </motion.p>
-
-          <div className="flex flex-wrap gap-2 justify-center mb-12">
-            {departments.map((department) => (
-              <button
-                key={department}
-                onClick={() => setSelectedDepartment(department)}
-                className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                  selectedDepartment === department
-                    ? "bg-blue-600 text-white"
-                    : "bg-gray-800 text-gray-300 hover:bg-gray-700"
-                }`}
-              >
-                {department}
-              </button>
-            ))}
+          <div className="text-center py-24">
+            <h2 className="text-4xl md:text-5xl font-light mb-6">Currently Not Hiring</h2>
+            <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+              We are currently not hiring. Please check back later or submit your resume for future opportunities.
+            </p>
+            <a href="#submit-resume" className="text-blue-400 hover:underline">Submit your resume</a>
           </div>
-
-          <motion.div
-            className="space-y-6"
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-          >
-            {filteredJobs.map((job, index) => (
-              <motion.div
-                key={index}
-                variants={fadeInUp}
-                className="border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition-colors duration-300"
-              >
-                <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
-                  <h3 className="text-2xl font-light">{job.title}</h3>
-                  <div className="flex flex-wrap gap-2 mt-2 md:mt-0">
-                    <span className="bg-blue-600/20 text-blue-400 px-3 py-1 rounded-full text-xs">
-                      {job.department}
-                    </span>
-                    <span className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs">{job.location}</span>
-                    <span className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-xs">{job.type}</span>
-                  </div>
-                </div>
-                <p className="text-gray-400 mb-6">{job.description}</p>
-                <button className="text-blue-400 hover:text-blue-300 font-medium flex items-center transition-colors">
-                  View Details
-                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-              </motion.div>
-            ))}
-          </motion.div>
-
-          {filteredJobs.length === 0 && (
-            <div className="text-center py-12">
-              <p className="text-gray-400">No open positions in this department at the moment.</p>
-            </div>
-          )}
         </div>
       </section>
 
