@@ -62,6 +62,7 @@ const services = [
     description:
       "Scalable and secure cloud infrastructure setup and management for improved efficiency and reduced costs",
     gradient: "from-purple-400 via-pink-400 to-blue-400",
+    link: "/Cloud-Solutions",
   },
   {
     title: "IT Infrastructure",
