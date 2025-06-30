@@ -910,6 +910,16 @@ export default function Component() {
                       <span>Learn more</span>
                       <ArrowRight className="w-4 h-4" />
                     </motion.button>
+                  ) : service.title === "Mobile App Development" ? (
+                    <motion.button
+                      className="inline-flex items-center space-x-2 text-blue-600 font-medium"
+                      whileHover={{ x: 5 }}
+                      transition={{ type: "spring", stiffness: 400 }}
+                      onClick={() => window.open('/Mobile-App-Development', '_blank')}
+                    >
+                      <span>Learn more</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </motion.button>
                   ) : (
                     <motion.button
                       className="inline-flex items-center space-x-2 text-blue-600 font-medium"

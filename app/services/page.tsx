@@ -48,6 +48,7 @@ const services = [
     title: "Mobile App Development",
     description: "Native and cross-platform mobile solutions that connect users to your brand anywhere, anytime",
     gradient: "from-pink-400 via-purple-400 to-blue-400",
+    link: "/Mobile-App-Development",
   },
   {
     title: "Integrations",
