@@ -55,6 +55,7 @@ const services = [
     description:
       "Seamless integration of third-party services and APIs to enhance functionality and streamline workflows",
     gradient: "from-cyan-400 via-blue-400 to-purple-400",
+    link: "/Integrations",
   },
   {
     title: "Cloud Solutions",
