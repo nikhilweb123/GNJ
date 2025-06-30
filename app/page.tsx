@@ -885,7 +885,27 @@ export default function Component() {
                       className="inline-flex items-center space-x-2 text-blue-600 font-medium"
                       whileHover={{ x: 5 }}
                       transition={{ type: "spring", stiffness: 400 }}
-                      onClick={() => window.open('/web-Development', '_blank')}
+                      onClick={() => window.open('/web-development', '_blank')}
+                    >
+                      <span>Learn more</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </motion.button>
+                  ) : service.title === "IT Support" ? (
+                    <motion.button
+                      className="inline-flex items-center space-x-2 text-blue-600 font-medium"
+                      whileHover={{ x: 5 }}
+                      transition={{ type: "spring", stiffness: 400 }}
+                      onClick={() => window.open('/IT-Support', '_blank')}
+                    >
+                      <span>Learn more</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </motion.button>
+                  ) : service.title === "UI/UX Design" ? (
+                    <motion.button
+                      className="inline-flex items-center space-x-2 text-blue-600 font-medium"
+                      whileHover={{ x: 5 }}
+                      transition={{ type: "spring", stiffness: 400 }}
+                      onClick={() => window.open('/UIUX-Design', '_blank')}
                     >
                       <span>Learn more</span>
                       <ArrowRight className="w-4 h-4" />
