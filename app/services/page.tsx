@@ -30,6 +30,7 @@ const services = [
     description:
       "Responsive and dynamic web applications built with modern frameworks for optimal performance and user experience",
     gradient: "from-blue-400 via-cyan-400 to-teal-400",
+    link: "/web-Development",
   },
   {
     title: "IT Support",
