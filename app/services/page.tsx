@@ -36,6 +36,7 @@ const services = [
     title: "IT Support",
     description: "Comprehensive technical assistance and maintenance services to keep your systems running smoothly",
     gradient: "from-teal-400 via-green-400 to-cyan-400",
+    link: "/IT-Support",
   },
   {
     title: "UI/UX Design",
