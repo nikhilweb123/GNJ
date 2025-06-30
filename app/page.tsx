@@ -870,15 +870,27 @@ export default function Component() {
                 <div className="mt-6">
                   <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
                   <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-                  <motion.button
-                    className="inline-flex items-center space-x-2 text-blue-600 font-medium"
-                    whileHover={{ x: 5 }}
-                    transition={{ type: "spring", stiffness: 400 }}
-                    onClick={() => window.location.href = '/contact'}
-                  >
-                    <span>Learn more</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </motion.button>
+                  {service.title === "Software Development" ? (
+                    <motion.button
+                      className="inline-flex items-center space-x-2 text-blue-600 font-medium"
+                      whileHover={{ x: 5 }}
+                      transition={{ type: "spring", stiffness: 400 }}
+                      onClick={() => window.open('/software-development', '_blank')}
+                    >
+                      <span>Learn more</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </motion.button>
+                  ) : (
+                    <motion.button
+                      className="inline-flex items-center space-x-2 text-blue-600 font-medium"
+                      whileHover={{ x: 5 }}
+                      transition={{ type: "spring", stiffness: 400 }}
+                      onClick={() => window.location.href = '/contact'}
+                    >
+                      <span>Learn more</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </motion.button>
+                  )}
                 </div>
               </motion.div>
             ))}

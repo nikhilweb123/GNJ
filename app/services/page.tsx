@@ -155,37 +155,44 @@ export default function Services() {
             whileInView="animate"
             viewport={{ once: true }}
           >
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-                variants={fadeInUp}
-                className="group relative bg-gray-900 rounded-2xl p-8 hover:transform hover:scale-105 transition-all duration-300 overflow-hidden cursor-pointer"
-              >
-                {/* Gradient Background */}
-                <div
-                  className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
-                />
-
-                {/* Gradient Border Effect */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-                <div className="relative z-10">
+            {services.map((service, index) => {
+              const card = (
+                <motion.div
+                  key={index}
+                  variants={fadeInUp}
+                  className="group relative bg-gray-900 rounded-2xl p-8 hover:transform hover:scale-105 transition-all duration-300 overflow-hidden cursor-pointer border border-transparent hover:border-blue-400"
+                >
+                  {/* Gradient Background */}
                   <div
-                    className={`w-12 h-12 rounded-full bg-gradient-to-br ${service.gradient} mb-6 flex items-center justify-center`}
-                  >
-                    <CheckCircle className="w-6 h-6 text-white" />
+                    className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}
+                  />
+
+                  {/* Gradient Border Effect */}
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                  <div className="relative z-10">
+                    <div
+                      className={`w-12 h-12 rounded-full bg-gradient-to-br ${service.gradient} mb-6 flex items-center justify-center`}
+                    >
+                      <CheckCircle className="w-6 h-6 text-white" />
+                    </div>
+
+                    <h3 className="text-2xl font-semibold mb-4 group-hover:text-white transition-colors">
+                      {service.title}
+                    </h3>
+
+                    <p className="text-gray-400 mb-6 group-hover:text-gray-300 transition-colors leading-relaxed">
+                      {service.description}
+                    </p>
                   </div>
-
-                  <h3 className="text-2xl font-semibold mb-4 group-hover:text-white transition-colors">
-                    {service.title}
-                  </h3>
-
-                  <p className="text-gray-400 mb-6 group-hover:text-gray-300 transition-colors leading-relaxed">
-                    {service.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              )
+              return service.link ? (
+                <Link key={index} href={service.link} passHref legacyBehavior>
+                  <a target="_blank" rel="noopener noreferrer">{card}</a>
+                </Link>
+              ) : card
+            })}
           </motion.div>
           {/* Contact Us Button */}
           <div className="flex justify-center mt-12">
