@@ -664,44 +664,15 @@ export default function Component() {
       </AnimatedSection>
 
       {/* Our Blog Section */}
-      <section className="py-24 bg-white text-black">
+      <section className="mt-16 py-24 bg-white text-black">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-5xl md:text-6xl font-light mb-16 text-center">Our Blog</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {[
-              {
-                title: "5 IT Trends Shaping Indian Businesses in 2024",
-                description: "Explore the latest technology trends that are transforming the Indian business landscape, from AI to cloud adoption.",
-                date: "26 June 2025",
-                link: "#",
-              },
-              {
-                title: "How to Choose the Right IT Partner for Your Startup",
-                description: "A practical guide for Indian startups on evaluating and selecting the best technology partner for growth.",
-                date: "26 June 2025",
-                link: "#",
-              },
-              {
-                title: "Cybersecurity Essentials for Small Businesses",
-                description: "Simple, actionable steps to protect your business from cyber threats in today's digital world.",
-                date: "26 June 2025",
-                link: "#",
-              },
-            ].map((blog, idx) => (
-              <div key={idx} className="bg-gray-100 rounded-2xl shadow-md p-8 flex flex-col justify-between h-full">
-                <div>
-                  <h3 className="text-2xl font-semibold mb-3">{blog.title}</h3>
-                  <p className="text-gray-700 mb-4">{blog.description}</p>
-                </div>
-                <div className="flex items-center justify-between mt-4">
-                  <span className="text-xs text-gray-500">{blog.date}</span>
-                  <a href={blog.link} className="text-blue-600 font-medium hover:underline">Read More</a>
-                </div>
-              </div>
-            ))}
+          <div className="flex justify-center items-center min-h-[200px]">
+            <span className="text-xl text-gray-500">No blogs created as of now.</span>
           </div>
         </div>
       </section>
+
 
       {/* Our Story Section */}
       <AnimatedSection>
