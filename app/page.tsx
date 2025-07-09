@@ -187,7 +187,7 @@ export default function Component() {
                   }}
                   transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY }} 
                 >
-                  Cyber Solutions
+                  Software Solutions
                 </motion.span>
               </div>
               <p className="text-gray-400">Empowering Innovation Together</p>
