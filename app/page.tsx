@@ -751,7 +751,7 @@ export default function Component() {
             >
               {/* Video Container */}
               <motion.div
-                className="relative w-200 h-200 rounded-full overflow-hidden"
+                className="relative w-200 h-200  overflow-hidden"
                 whileHover={{ scale: 1.2 }}
                 transition={{ type: "spring", stiffness: 100 }}
               >
@@ -762,7 +762,7 @@ export default function Component() {
                   muted
                   playsInline
                 >
-                  <source src="/wac.mp4" type="video/mp4" />
+                  <source src="/wac1.mp4" type="video/mp4" />
                 </video>
                 <div className="absolute inset-0 bg-black/20" />
               </motion.div>
