@@ -24,7 +24,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email Us",
-    details: "hello@gnj.com",
+    details: "Support@gnjworldwide.com",
     description: "Send us an email anytime",
   },
   {
@@ -48,20 +48,14 @@ const contactInfo = [
   {
     icon: Phone,
     title: "General Enquiry",
-    details: "+91 480 2733 111",
+    details: "+91 8446419217",
     description: "For general questions and support",
   },
   {
     icon: Phone,
     title: "Sales Enquiry",
-    details: "+91 480 2733 555",
+    details: "+91 9016753422",
     description: "Reach out to our sales team",
-  },
-  {
-    icon: Mail,
-    title: "Email",
-    details: "info@webandcrafts.com",
-    description: "Drop us an email anytime",
   },
 ]
 

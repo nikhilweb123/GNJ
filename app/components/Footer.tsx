@@ -81,15 +81,15 @@ export default function Footer() {
             <div className="space-y-4">
               <div>
                 <div className="text-sm text-gray-400 mb-1">General Enquiry</div>
-                <div>+91 480 2733 111</div>
+                <div>+91 8446419217</div>
               </div>
               <div>
                 <div className="text-sm text-gray-400 mb-1">Sales Enquiry</div>
-                <div>+91 480 2733 555</div>
+                <div>+91 9016753422</div>
               </div>
               <div>
                 <div className="text-sm text-gray-400 mb-1">Email</div>
-                <div>support@gnjworldwide.com</div>
+                <div>Support@gnjworldwide.com</div>
               </div>
               
             </div>
