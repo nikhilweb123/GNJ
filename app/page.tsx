@@ -315,7 +315,7 @@ export default function Component() {
 
       {/* Design Section */}
       <AnimatedSection delay={0.1}>
-        <div className="min-h-screen flex items-center justify-center px-6 relative">
+        <div className="min-h-screen flex items-center justify-center px-6 relative bg-indigo-400">
           <div className="max-w-6xl mx-auto text-center relative">
             <motion.h2
               className="text-8xl md:text-9xl lg:text-[12rem] font-light text-white"
@@ -324,9 +324,9 @@ export default function Component() {
                 opacity: [0, 1],
                 scale: [0.8, 1],
                 textShadow: [
-                  "0 0 20px rgba(255, 255, 255, 0.5)",
-                  "0 0 40px rgba(255, 255, 255, 0.8)",
-                  "0 0 20px rgba(255, 255, 255, 0.5)",
+                  "0 0 20px rgba(255, 0, 0, 0.5)",
+                  "0 0 40px rgba(255, 0, 0, 0.8)",
+                  "0 0 20px rgba(105, 0, 0, 0.5)",
                 ],
                 transition: {
                   opacity: { duration: 1.5, ease: "easeOut" },
@@ -444,7 +444,7 @@ export default function Component() {
 
       {/* Build Section */}
       <AnimatedSection delay={0.2}>
-        <div className="min-h-screen flex items-center justify-center px-6 relative bg-gray-900">
+        <div className="min-h-screen flex items-center justify-center px-6 relative bg-rose-600">
           <div className="max-w-6xl mx-auto text-center relative">
             <motion.h2
               className="text-8xl md:text-9xl lg:text-[12rem] font-light text-white"
@@ -453,9 +453,9 @@ export default function Component() {
                 opacity: [0, 1],
                 x: [0, 0],
                 textShadow: [
-                  "0 0 30px rgba(6, 182, 212, 0.6)",
-                  "0 0 60px rgba(139, 92, 246, 0.8)",
-                  "0 0 30px rgba(6, 182, 212, 0.6)",
+                  "0 0 30px rgba(0, 15, 71, 0.6)",
+                  "0 0 60px rgb(0, 0, 255)",
+                  "0 0 30px rgb(0, 68, 255)",
                 ],
                 transition: {
                   opacity: { duration: 1.5, ease: "easeOut" },
@@ -526,7 +526,7 @@ export default function Component() {
 
       {/* Create Section */}
       <AnimatedSection delay={0.3}>
-        <div className="min-h-screen flex items-center justify-center px-6 relative">
+        <div className="min-h-screen flex items-center justify-center px-6 relative bg-indigo-400">
           <div className="max-w-6xl mx-auto text-center relative">
             <motion.h2
               className="text-8xl md:text-9xl lg:text-[12rem] font-light text-white"
@@ -535,9 +535,9 @@ export default function Component() {
                 opacity: [0, 1],
                 y: [0, 0],
                 textShadow: [
-                  "0 0 25px rgba(236, 72, 153, 0.6)",
+                  "0 0 25px rgb(255, 0, 0)",
                   "0 0 50px rgba(168, 85, 247, 0.8)",
-                  "0 0 25px rgba(236, 72, 153, 0.6)",
+                  "0 0 25px rgb(233, 31, 31)",
                 ],
                 transition: {
                   opacity: { duration: 1.5, ease: "easeOut" },
@@ -603,7 +603,7 @@ export default function Component() {
 
       {/* Innovate Section */}
       <AnimatedSection delay={0.4}>
-        <div className="min-h-screen flex items-center justify-center px-6 relative bg-gray-900">
+        <div className="min-h-screen flex items-center justify-center px-6 relative bg-rose-600">
           <div className="max-w-6xl mx-auto text-center relative">
             <motion.h2
               className="text-7xl md:text-8xl lg:text-[10rem] font-light text-white"
@@ -612,9 +612,9 @@ export default function Component() {
                 opacity: [0, 1],
                 scale: [0.5, 1],
                 textShadow: [
-                  "0 0 35px rgba(34, 197, 94, 0.6)",
+                  "0 0 35px rgba(38, 0, 255, 0.6)",
                   "0 0 70px rgba(59, 130, 246, 0.8)",
-                  "0 0 35px rgba(34, 197, 94, 0.6)",
+                  "0 0 35px rgba(0, 47, 255, 0.6)",
                 ],
                 transition: {
                   opacity: { duration: 2, ease: "easeOut" },
@@ -668,7 +668,7 @@ export default function Component() {
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-5xl md:text-6xl font-light mb-16 text-center">Our Blog</h2>
           <div className="flex justify-center items-center min-h-[200px]">
-            <span className="text-xl text-gray-500">No blogs created as of now.</span>
+            <span className="text-xl text-gray-500">No blogs Available  </span>
           </div>
         </div>
       </section>
