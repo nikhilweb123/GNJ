@@ -209,7 +209,7 @@ export default function Component() {
               transition={{ duration: 5, repeat: Number.POSITIVE_INFINITY }}
               className="bg-gradient-to-r from-white via-gray-300 to-white bg-[length:200%_100%] bg-clip-text text-transparent"
             >
-              Welcome to GNJ,
+              Welcome to GNJ Worldwide,
             </motion.span>
             <br />
             <span className="text-gray-400">Team GNJ!</span>
