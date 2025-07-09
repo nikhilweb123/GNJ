@@ -195,7 +195,7 @@ export default function Component() {
           </motion.div>
 
           <motion.h1
-            className="text-6xl md:text-8xl font-light mb-8"
+            className="text-6xl md:text-8xl font-light mb-8 mt-20"
             initial={{ opacity: 0, y: 30 }}
             animate={{
               opacity: [0, 1],
@@ -211,13 +211,12 @@ export default function Component() {
             >
               Welcome to GNJ Worldwide,
             </motion.span>
-            <br />
-           
+            
           </motion.h1>
 
           <Link href="/about">
             <motion.button
-              className="inline-flex items-center space-x-2 text-lg hover:text-gray-300 transition-colors border border-white/30 px-6 py-3 rounded-lg"
+              className="inline-flex items-center space-x-2 text-lg hover:text-gray-300 transition-colors border border-white/30 px-6 py-3 rounded-lg mt-20"
               initial={{ opacity: 0 }}
               animate={{
                 opacity: [0, 1],
