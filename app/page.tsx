@@ -162,7 +162,7 @@ export default function Component() {
               whileHover={{ scale: 1.02, boxShadow: "0 25px 50px -12px rgba(255, 255, 255, 0.1)" }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <h2 className="text-lg text-gray-300 mb-4">Welcome to GNJ</h2>
+              <h2 className="text-lg text-gray-300 mb-4">Welcome to GNJ Worldwide</h2>
               <div className="flex items-center justify-center space-x-4 mb-4">
                 <motion.span
                   className="text-3xl font-bold"
