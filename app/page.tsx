@@ -212,7 +212,7 @@ export default function Component() {
               Welcome to GNJ Worldwide,
             </motion.span>
             <br />
-            <span className="text-gray-400">Team GNJ!</span>
+           
           </motion.h1>
 
           <Link href="/about">
