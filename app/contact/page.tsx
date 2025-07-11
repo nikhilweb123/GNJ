@@ -1,10 +1,9 @@
 "use client"
 
-import type React from "react"
+import React, { useState } from "react"
 
 import { motion } from "framer-motion"
 import { Mail, Phone, MapPin, Clock, Send, MessageSquare, Users, Headphones } from "lucide-react"
-import { useState } from "react"
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -356,7 +355,7 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* FAQ Dropdown/Accordion */}
       <section className="py-16 border-t border-gray-800">
         <div className="max-w-4xl mx-auto px-6">
           <motion.h2
@@ -369,24 +368,9 @@ export default function ContactPage() {
             Frequently Asked Questions
           </motion.h2>
 
-          <motion.div
-            className="space-y-6"
-            variants={staggerContainer}
-            initial="initial"
-            whileInView="animate"
-            viewport={{ once: true }}
-          >
-            {faqs.map((faq, index) => (
-              <motion.div
-                key={index}
-                variants={fadeInUp}
-                className="border border-gray-800 rounded-xl p-6 hover:border-gray-600 transition-colors"
-              >
-                <h3 className="text-xl font-semibold mb-3">{faq.question}</h3>
-                <p className="text-gray-400 leading-relaxed">{faq.answer}</p>
-              </motion.div>
-            ))}
-          </motion.div>
+          {/* FAQ Dropdown/Accordion */}
+          <FAQAccordion faqs={faqs} />
+
         </div>
       </section>
 
@@ -478,6 +462,32 @@ export default function ContactPage() {
           </motion.div>
         </div>
       </section>
+    </div>
+  )
+}
+
+function FAQAccordion({ faqs }: { faqs: { question: string; answer: string }[] }) {
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
+
+  return (
+    <div className="space-y-4">
+      {faqs.map((faq, idx) => (
+        <div key={idx} className="border border-gray-800 rounded-xl">
+          <button
+            className="w-full text-left p-6 focus:outline-none flex justify-between items-center hover:border-gray-600 transition-colors"
+            onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
+            aria-expanded={openIndex === idx}
+          >
+            <span className="text-xl font-semibold">{faq.question}</span>
+            <span className={`ml-4 transition-transform ${openIndex === idx ? 'rotate-90' : ''}`}>▶</span>
+          </button>
+          {openIndex === idx && (
+            <div className="px-6 pb-6 text-gray-400 leading-relaxed animate-fade-in">
+              {faq.answer}
+            </div>
+          )}
+        </div>
+      ))}
     </div>
   )
 }
