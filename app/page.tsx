@@ -96,23 +96,6 @@ export default function Component() {
     },
   ]
 
-  const clients = [
-    "ABCD",
-    "Star",
-    "LuLu GROUP INTERNATIONAL",
-    "GARMIN",
-    "FEDERAL BANK",
-    "Marriott",
-    "Joyalukkas",
-    "Synthite",
-    "alyasra FASHION",
-    "GEOJIT",
-    "Middlesex University Dubai",
-    "Al-Qatami GROUP",
-    "ETIHAD RAIL",
-    "AGAPPE",
-    "LANDMARK Group",
-  ]
 
   const serviceRoutes: Record<string, string> = {
     "Software Development": "/software-development",
@@ -872,58 +855,7 @@ export default function Component() {
       </section>
 
       {/* Clients Section */}
-      <AnimatedSection>
-        <div className="max-w-7xl mx-auto px-6 py-32">
-          <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
-            <motion.h2
-              className="text-6xl md:text-7xl font-light"
-              initial={{ opacity: 0, x: -50 }}
-              animate={{
-                opacity: [0, 1],
-                x: [0, 0],
-                transition: { duration: 1 }
-              }}
-              viewport={{ once: true }}
-            >
-              Clients
-            </motion.h2>
-
-            <motion.p
-              className="text-xl text-gray-300"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{
-                opacity: [0, 1],
-                x: [0, 0],
-                transition: { duration: 1, delay: 0.2 }
-              }}
-              viewport={{ once: true }}
-            >
-              Our clients are everything to us; so are we to them.
-            </motion.p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 mb-16">
-            {clients.map((client, index) => (
-              <motion.div
-                key={client}
-                className="flex items-center justify-center p-6 border border-gray-800 rounded-lg hover:border-gray-600 transition-colors"
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{
-                  opacity: [0, 1],
-                  scale: [0.8, 1.05],
-                  transition: { duration: 0.6, delay: index * 0.05 }
-                }}
-                viewport={{ once: true }}
-                whileHover={{
-                  boxShadow: "0 10px 25px rgba(255, 255, 255, 0.1)",
-                }}
-              >
-                <span className="text-white font-medium text-center text-sm">{client}</span>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </AnimatedSection>
+      
 
       {/* CTA Section */}
       <AnimatedSection>
