@@ -111,39 +111,16 @@ export default function AboutPage() {
           >
             Company Information
           </motion.h2>
-          <div className="grid md:grid-cols-2 gap-8 bg-gray-900 rounded-2xl p-8 mb-10">
-            <div>
-              <div className="mb-4">
-                <span className="font-semibold text-blue-400">Website:</span> <a href="https://www.gnjworldwide.com" className="text-blue-300 underline" target="_blank" rel="noopener noreferrer">www.gnjworldwide.com</a>
-              </div>
-              <div className="mb-4">
-                <span className="font-semibold text-blue-400">Industry:</span> <span className="text-gray-200">IT Services and IT Consulting</span>
-              </div>
-              <div className="mb-4">
-                <span className="font-semibold text-blue-400">Company size:</span> <span className="text-gray-200">2-10 employees</span>
-              </div>
-              <div className="mb-4">
-                <span className="font-semibold text-blue-400">Headquarters:</span> <span className="text-gray-200">Mumbai, Maharashtra</span>
-              </div>
-              <div className="mb-4">
-                <span className="font-semibold text-blue-400">Type:</span> <span className="text-gray-200">Public Company</span>
-              </div>
-              <div className="mb-4">
-                <span className="font-semibold text-blue-400">Founded:</span> <span className="text-gray-200">2023</span>
-              </div>
-            </div>
-            <div>
-              <div className="mb-4">
-                <span className="font-semibold text-blue-400">Specialties:</span>
-                <ul className="list-disc pl-6 text-gray-200 mt-2">
-                  <li><a href="/contact" className="text-blue-400 hover:underline">IT Developments</a></li>
-                  <li><a href="/contact" className="text-blue-400 hover:underline">Professional services</a></li>
-                  <li><a href="/contact" className="text-blue-400 hover:underline">Data Entrys</a></li>
-                  <li><a href="/contact" className="text-blue-400 hover:underline">IT Hardware Solutions</a></li>
-                  <li><a href="/contact" className="text-blue-400 hover:underline">IT Rental Service</a></li>
-                </ul>
-              </div>
-            </div>
+          <div className="mb-10">
+            <p className="text-lg text-gray-200 mb-4">
+              <strong>Website:</strong> <a href="https://www.gnjworldwide.com" className="text-blue-400 underline" target="_blank" rel="noopener noreferrer">www.gnjworldwide.com</a><br/>
+              <strong>Industry:</strong> IT Services and IT Consulting<br/>
+              <strong>Company size:</strong> 2-10 employees<br/>
+              <strong>Headquarters:</strong> Mumbai, Maharashtra<br/>
+              <strong>Type:</strong> Public Company<br/>
+              <strong>Founded:</strong> 2023<br/>
+              <strong>Specialties:</strong> IT Developments, Professional services, IT Hardware Solutions, IT Rental Service
+            </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <a href="/contact">
