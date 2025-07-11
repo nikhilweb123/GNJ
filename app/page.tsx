@@ -121,10 +121,15 @@ export default function Component() {
         <div className="absolute inset-0 z-0">
           <div className="relative w-full h-full">
             <iframe
-              src="https://www.youtube.com/embed/_Sl8diqCAFw?autoplay=1&mute=1&loop=1&playlist=_Sl8diqCAFw&controls=0&showinfo=0&rel=0&modestbranding=1"
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[150%] h-[120%] pointer-events-none"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/PeY9pWJ2Mbk?si=WaMztx4IbejXiEPw&autoplay=1&mute=1&loop=1&playlist=PeY9pWJ2Mbk"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
               allowFullScreen
+              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[150%] h-[120%] pointer-events-none"
             />
           </div>
           <div className="absolute inset-0 bg-gradient-to-b from-black/50 to-black/70" />
