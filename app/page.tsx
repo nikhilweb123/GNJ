@@ -652,14 +652,7 @@ export default function Component() {
       </AnimatedSection>
 
       {/* Our Blog Section */}
-      <section className="mt-16 py-24 bg-white text-black">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-5xl md:text-6xl font-light mb-16 text-center">Our Blog</h2>
-          <div className="flex justify-center items-center min-h-[200px]">
-            <span className="text-xl text-gray-500">No blogs Available  </span>
-          </div>
-        </div>
-      </section>
+      
 
 
       {/* Our Story Section */}
