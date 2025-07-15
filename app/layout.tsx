@@ -18,6 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/placeholder-logo.svg" type="image/svg+xml" />
+      </head>
       <body className={inter.className} suppressHydrationWarning>
         <Header />
         <main>{children}</main>
