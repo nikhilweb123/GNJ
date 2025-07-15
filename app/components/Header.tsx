@@ -22,11 +22,11 @@ export default function Header() {
         <div className="flex items-center justify-between">
         <a href="/">
           <motion.div
-            className="text-3xl text-[#ffffff] font-bold cursor-pointer"
+            className="flex items-center cursor-pointer"
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 400 }}
           >
-            GNJ Worldwide
+            <img src="/Logo.png" alt="GNJ Worldwide Logo" className="h-14 w-auto mr-2" />
           </motion.div>
         </a>
           
