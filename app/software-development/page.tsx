@@ -8,37 +8,37 @@ export default function SoftwareDevelopment() {
   const services = [
     {
       icon: Code,
-      title: "Custom Software Development",
+      title: "Bespoke Application Engineering",
       description:
-        "We create fully customized applications designed around your unique needs, ensuring flexibility, efficiency, and seamless user experiences.",
+        "We architect and build bespoke software solutions from the ground up, solving complex business challenges with innovative, scalable, and future-ready technology.",
       link: "/contact",
     },
     {
       icon: Globe,
-      title: "Web Application Development",
+      title: "Advanced Web Platforms",
       description:
-        "From dynamic websites to robust web portals, we develop scalable, secure, and responsive web apps that drive engagement and deliver results.",
+        "Our team engineers robust web applications with advanced functionality, seamless integrations, and a focus on security—empowering your business to thrive online.",
       link: "/contact",
     },
     {
       icon: Smartphone,
-      title: "Mobile App Development",
+      title: "Strategic Mobile Solutions",
       description:
-        "Reach your audience on any device. Our team builds intuitive iOS, Android, and cross-platform mobile apps using the latest frameworks and design practices.",
+        "We deliver high-performance mobile apps tailored to your goals, leveraging native and cross-platform technologies for exceptional reach and user engagement.",
       link: "/contact",
     },
     {
       icon: Building,
-      title: "Enterprise Solutions",
+      title: "Enterprise Digital Transformation",
       description:
-        "We develop and integrate enterprise-grade software to streamline operations, improve productivity, and enhance decision-making.",
+        "Transform your operations with enterprise-grade platforms that automate workflows, unify data, and support strategic decision-making at scale.",
       link: "/contact",
     },
     {
       icon: Wrench,
-      title: "Software Maintenance & Support",
+      title: "Ongoing Software Care & Optimization",
       description:
-        "Stay ahead of the curve with our continuous support and maintenance services, including version upgrades, bug fixes, and performance optimization.",
+        "Rely on our proactive support and maintenance to keep your software secure, up-to-date, and performing at its best—so you can focus on growth.",
       link: "/contact",
     },
   ]
