@@ -32,7 +32,6 @@ export default function Header() {
               className="h-16 w-auto mr-2"
               onError={(e) => {
                 e.currentTarget.onerror = null;
-                e.currentTarget.src = '/placeholder-logo.svg';
               }}
             />
           </motion.div>
