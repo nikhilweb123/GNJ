@@ -26,7 +26,7 @@ export default function Header() {
             whileHover={{ scale: 1.1 }}
             transition={{ type: "spring", stiffness: 400 }}
           >
-            <img src="/Logo.png" alt="GNJ Worldwide Logo" className="h-14 w-auto mr-2" />
+            <img src="/Logo.png" alt="GNJ Worldwide Logo" className="h-14 w-auto mr-2" onError={(e) => { e.currentTarget.onerror = null; e.currentTarget.src = '/placeholder-logo.png'; }} />
           </motion.div>
         </a>
           
