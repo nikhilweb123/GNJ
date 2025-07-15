@@ -96,28 +96,42 @@ export default function ContactPage() {
     service: "",
     message: "",
   })
-
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitResult, setSubmitResult] = useState<{ success: boolean; message: string } | null>(null)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000))
-
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      company: "",
-      service: "",
-      message: "",
-    })
-    setIsSubmitting(false)
-
-    // You would typically send the data to your backend here
-    alert("Thank you for your message! We'll get back to you soon.")
+    setSubmitResult(null)
+    const payload = {
+      access_key: "8ca542ba-f12b-42f5-9d21-6291de3ace17",
+      name: formData.name,
+      email: formData.email,
+      company: formData.company,
+      service: formData.service,
+      message: formData.message,
+    }
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
+      })
+      const result = await response.json()
+      if (result.success) {
+        setSubmitResult({ success: true, message: "Thank you for your message! We'll get back to you soon." })
+        setFormData({ name: "", email: "", company: "", service: "", message: "" })
+      } else {
+        setSubmitResult({ success: false, message: result.message || "Something went wrong. Please try again." })
+      }
+    } catch (error) {
+      setSubmitResult({ success: false, message: "Network error. Please try again later." })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -164,6 +178,8 @@ export default function ContactPage() {
             >
               <h2 className="text-3xl font-light mb-8">Send us a message</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
+                {/* Hidden access key for Web3Forms */}
+                <input type="hidden" name="access_key" value="8ca542ba-f12b-42f5-9d21-6291de3ace17" />
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
@@ -268,6 +284,11 @@ export default function ContactPage() {
                   )}
                 </button>
               </form>
+              {submitResult && (
+                <div className={`mt-4 text-center rounded-lg p-4 ${submitResult.success ? 'bg-green-700 text-white' : 'bg-red-700 text-white'}`}>
+                  {submitResult.message}
+                </div>
+              )}
             </motion.div>
 
             {/* Contact Information */}
