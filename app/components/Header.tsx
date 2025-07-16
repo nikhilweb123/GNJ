@@ -10,7 +10,7 @@ export default function Header() {
   const menuItems = [
     { name: "Services", link: "/services" },
     { name: "Industries", link: "/industries" },
-    { name: "Solution", link: "/solution" },
+    { name: "Solution", link: "/solutions" },
     { name: "Works", link: "/works" },
     { name: "About", link: "/about" },
     { name: "Technology", link: "/technology" },
