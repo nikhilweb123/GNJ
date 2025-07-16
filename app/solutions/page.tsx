@@ -52,7 +52,7 @@ export default function SolutionsPage() {
                   <img
                     src={solution.image}
                     alt={solution.name + " icon"}
-                    className="h-16 w-16 object-contain mb-4 mx-auto"
+                    className="h-24 w-24 object-contain mb-4 mx-auto"
                     loading="lazy"
                   />
                 )}

@@ -29,7 +29,7 @@ const technologies = [
   {
     name: "Artificial Intelligence",
     description: "The simulation of human intelligence in machines to perform tasks such as learning, reasoning, and problem-solving.",
-    image: "https://cdn-icons-png.flaticon.com/512/4712/4712107.png"
+    image: "https://www.stockvault.net/data/2016/05/18/198520/preview16.jpg"
   },
   {
     name: "Machine Learning",
@@ -128,7 +128,7 @@ export default function TechnologyPage() {
                   <img
                     src={tech.image}
                     alt={tech.name + " logo"}
-                    className="h-12 w-12 object-contain mb-4 mx-auto"
+                    className="h-20 w-20 object-contain mb-4 mx-auto"
                     loading="lazy"
                   />
                 )}
@@ -152,7 +152,7 @@ export default function TechnologyPage() {
                   <img
                     src={lang.image}
                     alt={lang.name + " logo"}
-                    className="h-16 w-16 object-contain mb-4 mx-auto"
+                    className="h-24 w-24 object-contain mb-4 mx-auto"
                     loading="lazy"
                   />
                 )}
