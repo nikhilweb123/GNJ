@@ -39,6 +39,12 @@ const contactInfo = [
     description: "Our Register Address",
   },
   {
+    icon: MapPin,
+    title: "Singapore Office",
+    details: "Co.:- GnJ Worldwide Private Limited, Office no.: 36, 5 Temasek Boulevard, 17th Floor Singapore, Central Singapore 038985",
+    description: "Our Singapore Headquarters",
+  },
+  {
     icon: Clock,
     title: "Working Hours",
     details: "Mon-Fri: 9am-6pm PST",
@@ -419,7 +425,8 @@ export default function ContactPage() {
                 <MapPin className="w-16 h-16 text-white mx-auto mb-4" />
                 <p className="text-2xl font-light text-white mb-2">Our Office</p>
                 <p className="text-blue-100">
-                  10th Floor, BKC Complex, Awfis, East Bandra, Mumbai, 400051 Maharashtra, India
+                  Co.:- GnJ Worldwide Private Limited,<br />
+                  Office no.: 36, 5 Temasek Boulevard, 17th Floor Singapore, Central Singapore 038985
                 </p>
               </div>
 
@@ -431,7 +438,7 @@ export default function ContactPage() {
                 className="w-full h-[400px] rounded-xl overflow-hidden shadow-2xl border-4 border-white/20 hover:border-blue-400 transition-all duration-500"
               >
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.2822895015856!2d72.86728767520453!3d19.391423043217717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c7a5466a7c77%3A0x42940cb5cf8f650a!2sAwfis%20Bandra%20Kurla%20Complex%20Mumbai!5e0!3m2!1sen!2sin!4v1719300344667!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1994.331393835427!2d103.8572163160112!3d1.2930979999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da199b2b1e6e2d%3A0x2e2b2b2b2b2b2b2b!2s5%20Temasek%20Blvd%2C%20Singapore%20038985!5e0!3m2!1sen!2ssg!4v1719300344667!5m2!1sen!2ssg"
                   width="100%"
                   height="100%"
                   loading="lazy"
