@@ -3,86 +3,106 @@ import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/ca
 const technologies = [
   {
     name: "Azure",
-    description: "Microsoft's cloud platform for building, deploying, and managing applications and services through a global network of data centers."
+    description: "Microsoft's cloud platform for building, deploying, and managing applications and services through a global network of data centers.",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg"
   },
   {
     name: "AWS",
-    description: "Amazon Web Services offers reliable, scalable, and inexpensive cloud computing services and infrastructure."
+    description: "Amazon Web Services offers reliable, scalable, and inexpensive cloud computing services and infrastructure.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
   },
   {
     name: "Office 365",
-    description: "A suite of productivity tools by Microsoft, including Word, Excel, PowerPoint, Outlook, and cloud services."
+    description: "A suite of productivity tools by Microsoft, including Word, Excel, PowerPoint, Outlook, and cloud services.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Microsoft_365_%282022%29.svg"
   },
   {
     name: "Dynamic 365",
-    description: "Microsoft's suite of intelligent business applications for CRM and ERP, enabling organizations to grow and evolve."
+    description: "Microsoft's suite of intelligent business applications for CRM and ERP, enabling organizations to grow and evolve.",
+    image: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Microsoft_365_%282022%29.svg"
   },
   {
     name: "Sales Force",
-    description: "A leading cloud-based CRM platform that helps businesses manage customer relationships and sales."
+    description: "A leading cloud-based CRM platform that helps businesses manage customer relationships and sales.",
+    image: "https://cdn.worldvectorlogo.com/logos/salesforce-2.svg"
   },
   {
     name: "Artificial Intelligence",
-    description: "The simulation of human intelligence in machines to perform tasks such as learning, reasoning, and problem-solving."
+    description: "The simulation of human intelligence in machines to perform tasks such as learning, reasoning, and problem-solving.",
+    image: "https://cdn-icons-png.flaticon.com/512/4712/4712107.png"
   },
   {
     name: "Machine Learning",
-    description: "A subset of AI that enables systems to learn and improve from experience without being explicitly programmed."
+    description: "A subset of AI that enables systems to learn and improve from experience without being explicitly programmed.",
+    image: "https://cdn-icons-png.flaticon.com/512/2721/2721297.png"
   },
   {
     name: "Data Science",
-    description: "The field of study that combines domain expertise, programming, and statistics to extract insights from data."
+    description: "The field of study that combines domain expertise, programming, and statistics to extract insights from data.",
+    image: "https://cdn-icons-png.flaticon.com/512/2721/2721297.png"
   },
   {
     name: "IoT",
-    description: "The Internet of Things connects physical devices to the internet, enabling data collection and smart automation."
+    description: "The Internet of Things connects physical devices to the internet, enabling data collection and smart automation.",
+    image: "https://cdn-icons-png.flaticon.com/512/1048/1048953.png"
   },
   {
     name: "Mongo DB",
-    description: "A document-oriented NoSQL database used for high volume data storage and rapid development."
+    description: "A document-oriented NoSQL database used for high volume data storage and rapid development.",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
   }
 ];
 
 const languages = [
   {
     name: ".NET",
-    description: "A free, cross-platform, open-source developer platform for building many different types of applications."
+    description: "A free, cross-platform, open-source developer platform for building many different types of applications.",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg"
   },
   {
     name: "Python",
-    description: "A versatile, high-level programming language known for its readability and broad applicability."
+    description: "A versatile, high-level programming language known for its readability and broad applicability.",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
   },
   {
     name: "PHP",
-    description: "A popular general-purpose scripting language especially suited to web development."
+    description: "A popular general-purpose scripting language especially suited to web development.",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
   },
   {
     name: "Node.js",
-    description: "A JavaScript runtime built on Chrome's V8 engine, enabling scalable server-side and networking applications."
+    description: "A JavaScript runtime built on Chrome's V8 engine, enabling scalable server-side and networking applications.",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
   },
   {
     name: "React native",
-    description: "A framework for building native mobile apps using React and JavaScript."
+    description: "A framework for building native mobile apps using React and JavaScript.",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
   },
   {
     name: "C, C++",
-    description: "Powerful, high-performance programming languages widely used for system/software development and game programming."
+    description: "Powerful, high-performance programming languages widely used for system/software development and game programming.",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
   },
   {
     name: "Golang",
-    description: "An open-source programming language designed for simplicity, reliability, and high performance."
+    description: "An open-source programming language designed for simplicity, reliability, and high performance.",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg"
   },
   {
     name: "Java",
-    description: "A robust, object-oriented programming language used for building platform-independent applications."
+    description: "A robust, object-oriented programming language used for building platform-independent applications.",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
   },
   {
     name: "React",
-    description: "A popular JavaScript library for building user interfaces, especially single-page applications."
+    description: "A popular JavaScript library for building user interfaces, especially single-page applications.",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
   },
   {
     name: "Next.js",
-    description: "A React framework for building fast, scalable, and SEO-friendly web applications with server-side rendering."
+    description: "A React framework for building fast, scalable, and SEO-friendly web applications with server-side rendering.",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
   }
 ];
 
@@ -104,6 +124,14 @@ export default function TechnologyPage() {
               className="bg-zinc-900 border-zinc-800 text-white rounded-2xl shadow-md hover:shadow-2xl hover:scale-[1.03] transition-all duration-200 h-full flex flex-col cursor-pointer"
             >
               <CardHeader>
+                {tech.image && (
+                  <img
+                    src={tech.image}
+                    alt={tech.name + " logo"}
+                    className="h-12 w-12 object-contain mb-4 mx-auto"
+                    loading="lazy"
+                  />
+                )}
                 <CardTitle className="text-2xl font-extrabold mb-2 text-white">{tech.name}</CardTitle>
                 <CardDescription className="text-gray-400 text-base leading-relaxed">{tech.description}</CardDescription>
               </CardHeader>
@@ -120,6 +148,14 @@ export default function TechnologyPage() {
               className="bg-zinc-900 border-zinc-800 text-white rounded-2xl shadow-md hover:shadow-2xl hover:scale-[1.03] transition-all duration-200 h-full flex flex-col cursor-pointer"
             >
               <CardHeader>
+                {lang.image && (
+                  <img
+                    src={lang.image}
+                    alt={lang.name + " logo"}
+                    className="h-16 w-16 object-contain mb-4 mx-auto"
+                    loading="lazy"
+                  />
+                )}
                 <CardTitle className="text-2xl font-extrabold mb-2 text-white">{lang.name}</CardTitle>
                 <CardDescription className="text-gray-400 text-base leading-relaxed">{lang.description}</CardDescription>
               </CardHeader>
