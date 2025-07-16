@@ -34,7 +34,7 @@ const technologies = [
   {
     name: "Machine Learning",
     description: "A subset of AI that enables systems to learn and improve from experience without being explicitly programmed.",
-    image: "https://cdn-icons-png.flaticon.com/512/2721/2721297.png"
+    image: "https://i0.wp.com/www.wi6labs.com/wp-content/uploads/2019/12/Machine-learning-logo-1.png?ssl=1"
   },
   {
     name: "Data Science",
