@@ -176,27 +176,7 @@ export default function ServicesPage() {
           ))}
         </div>
 
-        {/* Trusted by Section */}
-        <motion.div
-          className="mt-20 mb-16 text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.7 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-2xl md:text-3xl font-light mb-6">Trusted by Leading Organizations</h2>
-          <div className="flex flex-wrap justify-center gap-8 items-center mt-6">
-            {[1,2,3,4,5,6].map((n) => (
-              <img
-                key={n}
-                src="/placeholder-logo.svg"
-                alt="Client Logo"
-                className="h-10 w-auto opacity-80 hover:opacity-100 transition-opacity"
-                style={{ minWidth: 120 }}
-              />
-            ))}
-          </div>
-        </motion.div>
+        
 
         {/* Testimonials Section */}
         <motion.div
@@ -206,7 +186,7 @@ export default function ServicesPage() {
           transition={{ duration: 0.5, delay: 0.9 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-2xl md:text-3xl font-light mb-8 text-center">What Our Clients Say</h2>
+          <h2 className="text-2xl md:text-3xl font-light mb-10 text-center mt-10">What Our Clients Say</h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
               {

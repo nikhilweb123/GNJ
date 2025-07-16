@@ -19,7 +19,7 @@ const technologies = [
   {
     name: "Dynamic 365",
     description: "Microsoft's suite of intelligent business applications for CRM and ERP, enabling organizations to grow and evolve.",
-    image: "https://upload.wikimedia.org/wikipedia/commons/0/0e/Microsoft_365_%282022%29.svg"
+    image: "https://img.icons8.com/?size=256&id=c70ES3kZFhLz&format=png"
   },
   {
     name: "Sales Force",
@@ -39,7 +39,7 @@ const technologies = [
   {
     name: "Data Science",
     description: "The field of study that combines domain expertise, programming, and statistics to extract insights from data.",
-    image: "https://cdn-icons-png.flaticon.com/512/2721/2721297.png"
+    image: "https://images.unsplash.com/photo-1653179241553-891d33f05410?q=80&w=1330&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     name: "IoT",
