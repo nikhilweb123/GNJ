@@ -41,10 +41,10 @@ const values = [
 ]
 
 const stats = [
-  { number: "500+", label: "Projects Completed" },
-  { number: "50+", label: "Happy Clients" },
+  { number: "350+", label: "Projects Completed" },
+  { number: "15+", label: "Happy Clients" },
   { number: "8", label: "Years Experience" },
-  { number: "25+", label: "Team Members" },
+  { number: "10+", label: "Team Members" },
 ]
 
 const team = [
@@ -78,7 +78,7 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
-      <section className="pt-24 pb-16">
+      <section className=" mt-10 pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-6">
           <motion.h1
             className="text-7xl md:text-7xl font-light mb-8"
@@ -94,7 +94,7 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Traditional information technology management function (or IT) should be the technology backbone that is responsible for the development, and management of digital and administrative solutions in a professional way. The technology backbone consists of all information technology systems and processes that support the running of the business's operations, through the management of end-user services, plus enterprise and business applications. It is where the essential business asset of a company resides, and the purpose is to provide operational efficiency to the company through reliability, security, and scalability. <a href="https://www.gnjworldwide.com" className="text-blue-400 underline ml-1" target="_blank" rel="noopener noreferrer">Visit our website</a>.
+            Traditional information technology management function (or IT) should be the technology backbone that is responsible for the development, and management of digital and administrative solutions in a professional way. The technology backbone consists of all information technology systems and processes that support the running of the business's operations, through the management of end-user services, plus enterprise and business applications. It is where the essential business asset of a company resides, and the purpose is to provide operational efficiency to the company through reliability, security, and scalability. <a href="https://gnjsoft.com" className="text-blue-400 underline ml-1" target="_blank" rel="noopener noreferrer">Visit our website</a>.
           </motion.p>
         </div>
       </section>
@@ -117,7 +117,7 @@ export default function AboutPage() {
               <strong>Industry:</strong> IT Services and IT Consulting<br/>
               <strong>Company size:</strong> 2-10 employees<br/>
               <strong>Headquarters:</strong> Mumbai, Maharashtra<br/>
-              <strong>Type:</strong> Public Company<br/>
+              <strong>Type:</strong> Private Company<br/>
               <strong>Founded:</strong> 2023<br/>
               <strong>Specialties:</strong> IT Developments, Professional services, IT Hardware Solutions, IT Rental Service
             </p>
@@ -213,12 +213,12 @@ export default function AboutPage() {
             viewport={{ once: true }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <button className="bg-white text-black px-8 py-3 rounded-full font-medium hover:bg-gray-200 transition-colors">
-              Get In Touch
-            </button>
-            <button className="border border-gray-600 text-white px-8 py-3 rounded-full font-medium hover:border-white transition-colors">
-              View Our Work
-            </button>
+            <a href="/contact">
+              <button className="bg-white text-black px-8 py-3 rounded-full font-medium hover:bg-gray-200 transition-colors">
+                Get In Touch
+              </button>
+            </a>
+            
           </motion.div>
         </div>
       </section>

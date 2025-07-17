@@ -112,10 +112,10 @@ const process = [
 ]
 
 const stats = [
-  { icon: Users, number: "500+", label: "Projects Completed" },
+  { icon: Users, number: "350+", label: "Projects Completed" },
   { icon: Clock, number: "24/7", label: "Support Available" },
   { icon: Award, number: "99%", label: "Client Satisfaction" },
-  { icon: Zap, number: "5+", label: "Years Experience" },
+  { icon: Zap, number: "8+", label: "Years Experience" },
 ]
 
 export default function Services() {
