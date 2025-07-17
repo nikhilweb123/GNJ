@@ -71,7 +71,7 @@ export default function Component() {
     },
     {
       title: "Integrations",
-      description: "Seamless integration of third-party services and APIs to enhance functionality and streamline workflows",
+      description: "Seamless integration of third-party services and APIs to enhance functionality and workflows",
       image: "/Integrations.png",
     },
     {
@@ -89,17 +89,13 @@ export default function Component() {
       description: "End-to-end digital defense systems designed to safeguard your assets, and maintain uncompromised data integrity across all platforms.",
       image: "/Cyber Security.png",
     },
-    {
-      title: "Mobile Application Service",
-      description: "Continuous support, upgrades, and optimizations to keep your app smooth, secure, and ahead of the curve.",
-      image: "/Mobile Application Service.jpg",
-    },
+    
   ]
 
 
   const serviceRoutes: Record<string, string> = {
     "Software Development": "/software-development",
-    "Web Development": "/web-development",
+    "web Development": "/web-Development",
     "IT Support": "/IT-Support",
     "UI/UX Design": "/UIUX-Design",
     "Mobile App Development": "/Mobile-App-Development",
@@ -150,7 +146,7 @@ export default function Component() {
               whileHover={{ scale: 1.02, boxShadow: "0 25px 50px -12px rgba(255, 255, 255, 0.1)" }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <h2 className="text-lg text-gray-300 mb-4">Welcome to GNJ Worldwide</h2>
+              
               <div className="flex items-center justify-center space-x-4 mb-4">
                 <motion.span
                   className="text-3xl font-bold"
@@ -197,7 +193,7 @@ export default function Component() {
               transition={{ duration: 5, repeat: Number.POSITIVE_INFINITY }}
               className="bg-gradient-to-r from-white via-gray-300 to-white bg-[length:200%_100%] bg-clip-text text-transparent"
             >
-              Welcome to GNJ Worldwide,
+              Welcome to GNJ Worldwide
             </motion.span>
             
           </motion.h1>
@@ -432,7 +428,7 @@ export default function Component() {
 
       {/* Build Section */}
       <AnimatedSection delay={0.2}>
-        <div className="min-h-screen flex items-center justify-center px-6 relative bg-rose-600">
+        <div className="min-h-screen flex items-center justify-center px-6 relative bg-indigo-800">
           <div className="max-w-6xl mx-auto text-center relative">
             <motion.h2
               className="text-8xl md:text-9xl lg:text-[12rem] font-light text-white"
@@ -591,7 +587,7 @@ export default function Component() {
 
       {/* Innovate Section */}
       <AnimatedSection delay={0.4}>
-        <div className="min-h-screen flex items-center justify-center px-6 relative bg-rose-600">
+        <div className="min-h-screen flex items-center justify-center px-6 relative bg-indigo-800">
           <div className="max-w-6xl mx-auto text-center relative">
             <motion.h2
               className="text-7xl md:text-8xl lg:text-[10rem] font-light text-white"
@@ -857,15 +853,15 @@ export default function Component() {
                   <h3 className="text-2xl font-semibold mb-4">{service.title}</h3>
                   <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
                   {serviceRoutes[service.title] && (
-                    <motion.button
-                      className="inline-flex items-center space-x-2 text-blue-600 font-medium"
-                      whileHover={{ x: 5 }}
-                      transition={{ type: "spring", stiffness: 400 }}
-                      onClick={() => window.open(serviceRoutes[service.title], '_blank')}
+                    <a
+                      href={serviceRoutes[service.title]}
+                      className="inline-flex items-center space-x-2 text-blue-600 font-medium border border-blue-600 px-4 py-2 rounded-full hover:bg-blue-600 hover:text-white transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
                       <span>Learn more</span>
                       <ArrowRight className="w-4 h-4" />
-                    </motion.button>
+                    </a>
                   )}
                 </div>
               </motion.div>
