@@ -8,14 +8,14 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const menuItems = [
+    { name: "Home", link: "/" },
+    { name: "About us", link: "/about" },
+    { name: "Solutions", link: "/solutions" },
     { name: "Services", link: "/services" },
     { name: "Industries", link: "/industries" },
-    { name: "Solution", link: "/solutions" },
-    { name: "Works", link: "/works" },
-    { name: "About", link: "/about" },
     { name: "Technology", link: "/technology" },
     { name: "Careers", link: "/careers" },
-    { name: "Contact", link: "/contact" },
+    { name: "Contact us", link: "/contact" },
   ]
 
   return (
@@ -61,13 +61,7 @@ export default function Header() {
 
           <div className="flex text-white items-center space-x-8">
             <motion.div whileHover={{ scale: 1.1, rotate: 5 }}>
-              <Phone className="w-6 h-6" />
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.1, rotate: -5 }}>
               <Search className="w-6 h-6" />
-            </motion.div>
-            <motion.div whileHover={{ scale: 1.1, rotate: 5 }}>
-              <Bookmark className="w-6 h-6" />
             </motion.div>
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
