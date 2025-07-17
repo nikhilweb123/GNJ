@@ -50,7 +50,7 @@ export default function Component() {
       image: "/Software Development.png",
     },
     {
-      title: "Web Development",
+      title: "web Development",
       description: "Responsive and dynamic web applications built with modern frameworks for optimal performance and user experience",
       image: "/Web Development.png",
     },
@@ -832,12 +832,25 @@ export default function Component() {
                 whileHover={{ y: -10 }}
               >
                 <div className="relative overflow-hidden rounded-xl h-48 flex items-center justify-center bg-black/10">
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    className="object-cover w-full h-full"
-                  />
-                  <div className="absolute inset-0 bg-black/20" />
+                  {serviceRoutes[service.title] ? (
+                    <a href={serviceRoutes[service.title]} target="_blank" rel="noopener noreferrer">
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="object-cover w-full h-full"
+                      />
+                      <div className="absolute inset-0 bg-black/20" />
+                    </a>
+                  ) : (
+                    <>
+                      <img
+                        src={service.image}
+                        alt={service.title}
+                        className="object-cover w-full h-full"
+                      />
+                      <div className="absolute inset-0 bg-black/20" />
+                    </>
+                  )}
                 </div>
 
                 <div className="mt-6">
