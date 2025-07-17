@@ -741,7 +741,7 @@ export default function Component() {
                     }}
                     whileHover={{ scale: 1.1 }}
                   >
-                    <div className="text-sm font-semibold text-white">450+</div>
+                    <div className="text-sm font-semibold text-white">350+</div>
                     <div className="text-xs text-gray-400">Projects</div>
                 </motion.div>
 
@@ -762,7 +762,7 @@ export default function Component() {
                     }}
                     whileHover={{ scale: 1.1 }}
                   >
-                    <div className="text-sm font-bold text-white">100</div>
+                    <div className="text-sm font-bold text-white">50</div>
                     <div className="text-xs text-gray-400">Brands</div>
               </motion.div>
 
@@ -785,7 +785,7 @@ export default function Component() {
                   }}
                   whileHover={{ scale: 1.1 }}
                 >
-                  <div className="text-sm font-bold text-white">600+</div>
+                  <div className="text-sm font-bold text-white">15+</div>
                   <div className="text-xs text-gray-400">Clients</div>
               </motion.div>
 

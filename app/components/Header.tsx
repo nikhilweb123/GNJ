@@ -19,8 +19,8 @@ export default function Header() {
   ]
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-gray-800">
-      <div className="max-w-7xl mx-auto px-6 py-4">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/70 backdrop-blur-sm border-b border-gray-800">
+      <div className="max-w-7xl mx-auto px-6 py-3">
         <div className="flex items-center justify-between">
         <a href="/">
           <motion.div
@@ -39,7 +39,7 @@ export default function Header() {
           </motion.div>
         </a>
           
-          <div className="hidden md:flex items-center space-x-14">
+          <div className="hidden md:flex items-center space-x-11">
             {menuItems.map((item) => (
               <motion.a
                 key={item.name}
@@ -63,6 +63,14 @@ export default function Header() {
             <motion.div whileHover={{ scale: 1.1, rotate: 5 }}>
               <Search className="w-6 h-6" />
             </motion.div>
+            {/* Schedule Meeting Button (Desktop) */}
+            <a
+              href="/contact"
+              className="hidden md:inline-flex items-center px-4 py-2 rounded-full font-semibold bg-gradient-to-r from-pink-500 via-yellow-400 to-orange-500 text-black shadow-lg hover:from-pink-600 hover:to-orange-600 transition-colors border-2 border-white/10 ml-2"
+              style={{ letterSpacing: '0.03em' }}
+            >
+              Schedule Meeting
+            </a>
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="md:hidden"
@@ -100,6 +108,15 @@ export default function Header() {
                   {item.name}
                 </motion.a>
               ))}
+              {/* Schedule Meeting Button (Mobile) */}
+              <a
+                href="/contact"
+                className="mt-4 inline-flex items-center justify-center px-5 py-2 rounded-full font-semibold bg-gradient-to-r from-pink-500 via-yellow-400 to-orange-500 text-black shadow-lg hover:from-pink-600 hover:to-orange-600 transition-colors border-2 border-white/10 text-lg"
+                style={{ letterSpacing: '0.03em' }}
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Schedule Meeting
+              </a>
             </div>
           </motion.div>
         )}
