@@ -425,7 +425,6 @@ export default function ContactPage() {
                 <MapPin className="w-16 h-16 text-white mx-auto mb-4" />
                 <p className="text-2xl font-light text-white mb-2">Our Office</p>
                 <p className="text-blue-100">
-                  Co.:- GnJ Worldwide Private Limited,<br />
                   10th Floor, BKC Complex, Awfis, East Bandra, Mumbai, 400051 Maharashtra, India
                 </p>
               </div>
