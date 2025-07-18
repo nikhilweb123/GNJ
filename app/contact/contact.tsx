@@ -59,7 +59,7 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Sales Enquiry",
-    details: "+91 9016753422",
+    details: "+91 9099126937",
     description: "Reach out to our sales team",
   },
 ]
