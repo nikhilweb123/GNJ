@@ -356,9 +356,7 @@ export default function CareersPage() {
             <a href="/contact">
               <button className="bg-blue-600 text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors mb-2 sm:mb-0">Contact Us</button>
             </a>
-            <a href="/works">
-              <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-full font-medium hover:bg-blue-600 hover:text-white transition-colors">Our Work</button>
-            </a>
+            
             <button className="bg-white text-black px-8 py-3 rounded-full font-medium hover:bg-gray-200 transition-colors">
               Submit Your Resume
             </button>
