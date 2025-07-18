@@ -2,10 +2,13 @@
 
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, Phone, Search, Bookmark, X } from "lucide-react"
-import { useState } from "react"
+import { useState, useRef } from "react"
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [showSearch, setShowSearch] = useState(false)
+  const searchInputRef = useRef(null)
+  const [searchQuery, setSearchQuery] = useState("");
 
   const menuItems = [
     { name: "Home", link: "/" },
@@ -17,6 +20,11 @@ export default function Header() {
     { name: "Careers", link: "/careers" },
     { name: "Contact us", link: "/contact" },
   ]
+
+  // Filter menu items for search
+  const filteredMenuItems = menuItems.filter(item =>
+    item.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/70 backdrop-blur-sm border-b border-gray-800">
@@ -61,7 +69,13 @@ export default function Header() {
 
           <div className="flex text-white items-center space-x-8">
             <motion.div whileHover={{ scale: 1.1, rotate: 5 }}>
-              <Search className="w-6 h-6" />
+              <button
+                aria-label="Open search"
+                className="focus:outline-none"
+                onClick={() => setShowSearch(true)}
+              >
+                <Search className="w-6 h-6" />
+              </button>
             </motion.div>
             {/* Schedule Meeting Button (Desktop) */}
             <a
@@ -85,6 +99,49 @@ export default function Header() {
         </div>
       </div>
 
+      {/* Search Overlay */}
+      {showSearch && (
+        <div className="fixed inset-0 z-50 flex items-start justify-center bg-black/70 backdrop-blur-sm">
+          <div className="mt-32 bg-white rounded-2xl flex flex-col items-stretch px-4 py-4 shadow-lg w-full max-w-md">
+            <div className="flex items-center mb-2">
+              <input
+                ref={searchInputRef}
+                type="text"
+                placeholder="Search..."
+                className="flex-1 px-4 py-2 rounded-full outline-none text-black bg-gray-100"
+                autoFocus
+                value={searchQuery}
+                onChange={e => setSearchQuery(e.target.value)}
+              />
+              <button
+                aria-label="Close search"
+                className="ml-2 text-black hover:text-red-500"
+                onClick={() => { setShowSearch(false); setSearchQuery(""); }}
+              >
+                <X className="w-6 h-6" />
+              </button>
+            </div>
+            {searchQuery && (
+              <div className="bg-white rounded-xl shadow border border-gray-200 divide-y divide-gray-100">
+                {filteredMenuItems.length > 0 ? (
+                  filteredMenuItems.map(item => (
+                    <a
+                      key={item.name}
+                      href={item.link}
+                      className="block px-4 py-2 text-black hover:bg-gray-100 rounded-xl transition-colors"
+                      onClick={() => { setShowSearch(false); setSearchQuery(""); }}
+                    >
+                      {item.name}
+                    </a>
+                  ))
+                ) : (
+                  <div className="px-4 py-2 text-gray-400">No results found.</div>
+                )}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMobileMenuOpen && (
