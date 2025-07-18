@@ -3,6 +3,8 @@ import { motion } from "framer-motion"
 import { ArrowRight, CheckCircle, Users, Clock, Award, Zap } from "lucide-react"
 import Link from "next/link"
 
+
+
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },

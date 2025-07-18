@@ -1,5 +1,10 @@
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 
+export const metadata = {
+  title: "Our Solutions - GnJ Worldwide",
+  description: "Empowering Innovation Together",
+}
+
 const solutions = [
   {
     name: "Operations Management",
