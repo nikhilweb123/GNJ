@@ -41,7 +41,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Singapore Office",
-    details: "Co.:- GnJ Worldwide Private Limited, Office no.: 36, 5 Temasek Boulevard, 17th Floor Singapore, Central Singapore 038985",
+    details: "Office no.: 36, 5 Temasek Boulevard, 17th Floor Singapore, Central Singapore 038985",
     description: "Our Singapore Headquarters",
   },
   {
