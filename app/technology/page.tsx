@@ -29,7 +29,7 @@ const technologies = [
   {
     name: "Artificial Intelligence",
     description: "The simulation of human intelligence in machines to perform tasks such as learning, reasoning, and problem-solving.",
-    image: "https://www.stockvault.net/data/2016/05/18/198520/preview16.jpg"
+    image: "https://cdn-icons-png.flaticon.com/512/8055/8055576.png"
   },
   {
     name: "Machine Learning",
@@ -39,12 +39,12 @@ const technologies = [
   {
     name: "Data Science",
     description: "The field of study that combines domain expertise, programming, and statistics to extract insights from data.",
-    image: "https://tecnico.ulisboa.pt/files/2022/01/seminario-quanthep-saverio-pascazio-1140x641.jpg"
+    image: "https://cdn-icons-png.flaticon.com/512/10815/10815819.png"
   },
   {
     name: "IoT",
     description: "The Internet of Things connects physical devices to the internet, enabling data collection and smart automation.",
-    image: "https://kinsta.com/wp-content/uploads/2022/10/what-is-iot-1024x512.jpg"
+    image: "https://cdn-icons-png.flaticon.com/512/9781/9781055.png"
   },
   {
     name: "Mongo DB",
@@ -143,6 +143,11 @@ const databases = [
     name: "PostgreSQL",
     description: "A powerful, open source object-relational database system with over 30 years of active development.",
     image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+  },
+  {
+    name: "Oracle",
+    description: "A multi-model database management system produced and marketed by Oracle Corporation, widely used for enterprise applications.",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg"
   },
 ];
 
