@@ -116,7 +116,7 @@ export default function Services() {
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
-      <section className="pt-24 pb-16">
+      <section className="pt-36 pb-16">
         <div className="max-w-7xl mx-auto px-6">
           <motion.h1
             className="text-6xl md:text-7xl font-light mb-8"

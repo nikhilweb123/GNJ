@@ -148,7 +148,7 @@ const databases = [
 
 export default function TechnologyPage() {
   return (
-    <div className="min-h-screen w-full bg-black py-24 px-2 sm:px-6">
+    <div className="pt-28 min-h-screen w-full bg-black py-24 px-2 sm:px-6">
       <div className="max-w-7xl mx-auto">
         <h1 className="mt-5 text-5xl font-extrabold mb-6 text-center text-white drop-shadow-lg tracking-tight">Our Technology Expertise</h1>
         <p className="text-lg text-gray-300 mb-16 text-center max-w-2xl mx-auto">

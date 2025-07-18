@@ -126,7 +126,7 @@ function IndustryIcon() {
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen bg-black text-white pt-24 pb-16">
+    <div className="min-h-screen bg-black text-white pt-36 pb-16">
       <div className="max-w-7xl mx-auto px-6">
         <motion.h1
           className="text-6xl md:text-7xl font-light mb-8"
