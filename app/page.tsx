@@ -47,12 +47,12 @@ export default function Component() {
       title: "Software Development",
       description:
         "Custom software solutions tailored to your business needs with cutting-edge technologies and best practices.",
-      image: "/Software Development.png",
+      image: "/Software Development.webp",
     },
     {
       title: "web Development",
       description: "Responsive and dynamic web applications built with modern frameworks for optimal performance and user experience",
-      image: "/Web Development.png",
+      image: "/Web Development.jpg",
     },
     {
       title: "IT Support",
@@ -72,7 +72,7 @@ export default function Component() {
     {
       title: "Integrations",
       description: "Seamless integration of third-party services and APIs to enhance functionality and workflows",
-      image: "/Integrations.png",
+      image: "/Integrations (2).png",
     },
     {
       title: "Cloud Solutions",
