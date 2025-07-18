@@ -4,12 +4,12 @@ const solutions = [
   {
     name: "Operations Management",
     description: "Streamline and optimize your business operations with real-time monitoring, automation, and analytics for improved efficiency and productivity.",
-    image: "https://pamco.co/wp-content/uploads/2020/11/smart-industry-robot-arms-for-digital-factory-production-technology.jpg" // white
+    image: "https://cdn-icons-png.flaticon.com/512/8047/8047485.png" // white
   },
   {
     name: "ERP (Enterprise Resource Planning)",
     description: "Integrate core business processes with a unified ERP system, enabling data-driven decision-making and seamless workflow across departments.",
-    image: "https://ebrsoftware.com/wp-content/uploads/2022/12/ERP-SOFTWARE-DUBAI.jpg" // white
+    image: "https://cdn-icons-png.flaticon.com/512/10614/10614668.png" // white
   },
   {
     name: "Supply Chain Management",
