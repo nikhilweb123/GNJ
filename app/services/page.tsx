@@ -367,12 +367,12 @@ export default function Services() {
             viewport={{ once: true }}
             className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-            <button className="bg-white text-black px-8 py-3 rounded-full font-medium hover:bg-gray-200 transition-colors">
-              Start Your Project
-            </button>
-            <button className="border border-gray-600 text-white px-8 py-3 rounded-full font-medium hover:border-white transition-colors">
-              Schedule Consultation
-            </button>
+            
+            <a href="tel:+918446419217">
+              <button className="bg-green-500 text-white px-8 py-3 rounded-full font-medium hover:bg-green-600 transition-colors">
+                Call Now
+              </button>
+            </a>
           </motion.div>
         </div>
       </section>
