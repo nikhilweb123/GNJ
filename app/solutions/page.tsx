@@ -4,12 +4,12 @@ const solutions = [
   {
     name: "Operations Management",
     description: "Streamline and optimize your business operations with real-time monitoring, automation, and analytics for improved efficiency and productivity.",
-    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/azure/azure-original.svg" // white
+    image: "https://pamco.co/wp-content/uploads/2020/11/smart-industry-robot-arms-for-digital-factory-production-technology.jpg" // white
   },
   {
     name: "ERP (Enterprise Resource Planning)",
     description: "Integrate core business processes with a unified ERP system, enabling data-driven decision-making and seamless workflow across departments.",
-    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/oracle/oracle-original.svg" // white
+    image: "https://ebrsoftware.com/wp-content/uploads/2022/12/ERP-SOFTWARE-DUBAI.jpg" // white
   },
   {
     name: "Supply Chain Management",
@@ -37,7 +37,7 @@ export default function SolutionsPage() {
   return (
     <div className="min-h-screen w-full bg-black py-24 px-2 sm:px-6">
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-5xl font-extrabold mb-6 text-center text-white drop-shadow-lg tracking-tight">Our Solutions</h1>
+        <h1 className=" mt-5 text-5xl font-extrabold mb-6 text-center text-white drop-shadow-lg tracking-tight">Our Solutions</h1>
         <p className="text-lg text-gray-300 mb-16 text-center max-w-2xl mx-auto">
           Empower your business with our comprehensive suite of solutions designed to drive growth, efficiency, and innovation across all operations.
         </p>

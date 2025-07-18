@@ -39,12 +39,12 @@ const technologies = [
   {
     name: "Data Science",
     description: "The field of study that combines domain expertise, programming, and statistics to extract insights from data.",
-    image: "https://images.unsplash.com/photo-1653179241553-891d33f05410?q=80&w=1330&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    image: "https://tecnico.ulisboa.pt/files/2022/01/seminario-quanthep-saverio-pascazio-1140x641.jpg"
   },
   {
     name: "IoT",
     description: "The Internet of Things connects physical devices to the internet, enabling data collection and smart automation.",
-    image: "https://cdn-icons-png.flaticon.com/512/1048/1048953.png"
+    image: "https://kinsta.com/wp-content/uploads/2022/10/what-is-iot-1024x512.jpg"
   },
   {
     name: "Mongo DB",
@@ -103,14 +103,54 @@ const languages = [
     name: "Next.js",
     description: "A React framework for building fast, scalable, and SEO-friendly web applications with server-side rendering.",
     image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
-  }
+  },
+  // Added languages
+  {
+    name: "Flutter",
+    description: "An open-source UI software development toolkit by Google for building natively compiled applications for mobile, web, and desktop from a single codebase.",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"
+  },
+  {
+    name: "Dart",
+    description: "A client-optimized language for fast apps on any platform, developed by Google and used to build mobile, desktop, server, and web applications.",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg"
+  },
+  {
+    name: "Kotlin",
+    description: "A modern programming language that makes developers happier. Used for Android, web, server, and multiplatform development.",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg"
+  },
+  {
+    name: "Django",
+    description: "A high-level Python web framework that encourages rapid development and clean, pragmatic design.",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
+  },
+];
+
+// Add databases array
+const databases = [
+  {
+    name: "MySQL",
+    description: "An open-source relational database management system based on SQL.",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+  },
+  {
+    name: "Firebase",
+    description: "A platform developed by Google for creating mobile and web applications, offering real-time database and backend as a service.",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg"
+  },
+  {
+    name: "PostgreSQL",
+    description: "A powerful, open source object-relational database system with over 30 years of active development.",
+    image: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+  },
 ];
 
 export default function TechnologyPage() {
   return (
     <div className="min-h-screen w-full bg-black py-24 px-2 sm:px-6">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-5xl font-extrabold mb-6 text-center text-white drop-shadow-lg tracking-tight">Our Technology Expertise</h1>
+        <h1 className="mt-5 text-5xl font-extrabold mb-6 text-center text-white drop-shadow-lg tracking-tight">Our Technology Expertise</h1>
         <p className="text-lg text-gray-300 mb-16 text-center max-w-2xl mx-auto">
           We leverage a wide range of modern technologies to deliver innovative, scalable, and secure solutions tailored to your business needs.
         </p>
@@ -158,6 +198,30 @@ export default function TechnologyPage() {
                 )}
                 <CardTitle className="text-2xl font-extrabold mb-2 text-white">{lang.name}</CardTitle>
                 <CardDescription className="text-gray-400 text-base leading-relaxed">{lang.description}</CardDescription>
+              </CardHeader>
+            </Card>
+          ))}
+        </div>
+
+        {/* Databases Section */}
+        <h2 className="text-3xl font-bold mb-6 text-white mt-12 text-center">Databases</h2>
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mb-16">
+          {databases.map((db) => (
+            <Card
+              key={db.name}
+              className="bg-zinc-900 border-zinc-800 text-white rounded-2xl shadow-md hover:shadow-2xl hover:scale-[1.03] transition-all duration-200 h-full flex flex-col cursor-pointer"
+            >
+              <CardHeader>
+                {db.image && (
+                  <img
+                    src={db.image}
+                    alt={db.name + " logo"}
+                    className="h-20 w-20 object-contain mb-4 mx-auto"
+                    loading="lazy"
+                  />
+                )}
+                <CardTitle className="text-2xl font-extrabold mb-2 text-white">{db.name}</CardTitle>
+                <CardDescription className="text-gray-400 text-base leading-relaxed">{db.description}</CardDescription>
               </CardHeader>
             </Card>
           ))}
