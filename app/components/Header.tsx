@@ -3,6 +3,7 @@
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, Phone, Search, Bookmark, X } from "lucide-react"
 import { useState, useRef } from "react"
+import { services as servicesData } from "../services/Services";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -24,6 +25,11 @@ export default function Header() {
   // Filter menu items for search
   const filteredMenuItems = menuItems.filter(item =>
     item.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  // Filter services for search
+  const filteredServices = servicesData.filter((service: { title: string }) =>
+    service.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   return (
@@ -123,17 +129,29 @@ export default function Header() {
             </div>
             {searchQuery && (
               <div className="bg-white rounded-xl shadow border border-gray-200 divide-y divide-gray-100">
-                {filteredMenuItems.length > 0 ? (
-                  filteredMenuItems.map(item => (
-                    <a
-                      key={item.name}
-                      href={item.link}
-                      className="block px-4 py-2 text-black hover:bg-gray-100 rounded-xl transition-colors"
-                      onClick={() => { setShowSearch(false); setSearchQuery(""); }}
-                    >
-                      {item.name}
-                    </a>
-                  ))
+                {filteredMenuItems.length > 0 || filteredServices.length > 0 ? (
+                  <>
+                    {filteredMenuItems.map(item => (
+                      <a
+                        key={item.name}
+                        href={item.link}
+                        className="block px-4 py-2 text-black hover:bg-gray-100 rounded-xl transition-colors"
+                        onClick={() => { setShowSearch(false); setSearchQuery(""); }}
+                      >
+                        {item.name}
+                      </a>
+                    ))}
+                    {filteredServices.map((service: { title: string; link: string }) => (
+                      <a
+                        key={service.title}
+                        href={service.link}
+                        className="block px-4 py-2 text-black hover:bg-gray-100 rounded-xl transition-colors"
+                        onClick={() => { setShowSearch(false); setSearchQuery(""); }}
+                      >
+                        {service.title}
+                      </a>
+                    ))}
+                  </>
                 ) : (
                   <div className="px-4 py-2 text-gray-400">No results found.</div>
                 )}

@@ -19,7 +19,7 @@ const staggerContainer = {
   },
 }
 
-const services = [
+export const services = [
   {
     title: "Software Development",
     description:
