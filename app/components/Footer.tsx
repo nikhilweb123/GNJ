@@ -5,7 +5,7 @@ import Link from "next/link"
 
 export default function Footer() {
   return (
-    <footer className="border-t border-gray-800 py-16">
+    <footer className="border-t border-gray-800 py-4 mt-10">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div>
@@ -93,7 +93,7 @@ export default function Footer() {
         </div>
       </div>
       {/* Policy Links Row with Copyright Right-Aligned */}
-      <div className="border-t border-gray-200 bg-gray-50 py-4 w-full mt-8">
+      <div className="border-t border-gray-200 bg-gray-50 py-4 w-full mt-3">
         <div className="max-w-7xl mx-auto px-6 flex flex-wrap items-center justify-between text-sm text-gray-500">
           <div className="flex flex-wrap gap-12">
             <a href="#" className="hover:underline">User Policy</a>
