@@ -86,7 +86,7 @@ export default function Header() {
             {/* Schedule Meeting Button (Desktop) */}
             <a
               href="/contact"
-              className="hidden md:inline-flex items-center px-4 py-2 rounded-full font-semibold bg-gradient-to-r from-pink-500 via-yellow-400 to-orange-500 text-black shadow-lg hover:from-pink-600 hover:to-orange-600 transition-colors border-2 border-white/10 ml-2"
+              className="hidden md:inline-flex items-center px-3 py-1 rounded-full font-semibold bg-gradient-to-r from-pink-500 via-yellow-400 to-orange-500 text-black shadow-lg hover:from-pink-600 hover:to-orange-600 transition-colors border-2 border-white/10 ml-2"
               style={{ letterSpacing: '0.03em' }}
             >
               Schedule Meeting
@@ -186,8 +186,8 @@ export default function Header() {
               {/* Schedule Meeting Button (Mobile) */}
               <a
                 href="/contact"
-                className="mt-4 inline-flex items-center justify-center px-5 py-2 rounded-full font-semibold bg-gradient-to-r from-pink-500 via-yellow-400 to-orange-500 text-black shadow-lg hover:from-pink-600 hover:to-orange-600 transition-colors border-2 border-white/10 text-lg"
-                style={{ letterSpacing: '0.03em' }}
+                className="mt-4 ml-auto flex items-center justify-center px-3 py-1.5 rounded-full font-medium bg-gradient-to-r from-pink-500 via-yellow-400 to-orange-500 text-black shadow hover:from-pink-600 hover:to-orange-600 transition-colors border border-white/10 text-base"
+                style={{ letterSpacing: '0.03em', maxWidth: 'fit-content' }}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Schedule Meeting
