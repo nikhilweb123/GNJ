@@ -126,9 +126,6 @@ export default function About() {
           <a href="/contact">
             <button className="bg-blue-600 text-white px-8 py-3 rounded-full font-medium hover:bg-blue-700 transition-colors">Contact Us</button>
           </a>
-          <a href="/works">
-            <button className="border border-blue-600 text-blue-600 px-8 py-3 rounded-full font-medium hover:bg-blue-600 hover:text-white transition-colors">Our Work</button>
-          </a>
         </div>
       </div>
     </section>
