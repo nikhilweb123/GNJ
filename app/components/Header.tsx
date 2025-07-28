@@ -74,7 +74,7 @@ export default function Header() {
           </div>
 
 
-          /* search button style in 82th line  */
+         { /* search button style in 82th line  */}
           <div className="flex text-white items-center space-x-8">
             <motion.div whileHover={{ scale: 1.1, rotate: 5 }}>
               <button
