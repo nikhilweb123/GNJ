@@ -15,7 +15,6 @@ export default function Footer() {
                 { name: "About", href: "/about" },
                 { name: "Services", href: "/services" },
                 { name: "Industries", href: "/industries" },
-                { name: "Works", href: "/works" },
                 { name: "Careers", href: "/careers" },
                 { name: "Contact", href: "/contact" },
               ].map((item) => (
