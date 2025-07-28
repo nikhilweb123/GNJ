@@ -73,11 +73,13 @@ export default function Header() {
             ))}
           </div>
 
+
+          /* search button style in 82th line  */
           <div className="flex text-white items-center space-x-8">
             <motion.div whileHover={{ scale: 1.1, rotate: 5 }}>
               <button
                 aria-label="Open search"
-                className="focus:outline-none"
+                className="focus:outline-none py-4 px-2 rounded-xl bg-gradient-to-r from-pink-300 via-yellow-400 to-orange-500 text-black shadow-lg hover:from-pink-600 hover:to-orange-600 transition-colors"
                 onClick={() => setShowSearch(true)}
               >
                 <Search className="w-6 h-6" />
@@ -198,4 +200,4 @@ export default function Header() {
       </AnimatePresence>
     </nav>
   )
-} 
+}
