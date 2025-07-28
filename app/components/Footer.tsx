@@ -108,6 +108,10 @@ export default function Footer() {
       {/* Policy Links Row with Copyright Right-Aligned */}
       <div className="border-t border-gray-200 bg-gray-50 py-4 w-full mt-3">
         <div className="max-w-7xl mx-auto px-6 flex flex-wrap items-center justify-between text-sm text-gray-500">
+          <div className="flex items-center gap-2 text-xs text-gray-400 mt-2 sm:mt-0">
+            <img src="/Logo.png" alt="GNJ Worldwide Logo" className="h-5 w-auto" />
+            <span>© 2025 GNJ Worldwide</span>
+          </div>
           <div className="flex flex-wrap gap-12">
             <a href="#" className="hover:underline">User Policy</a>
             <a href="#" className="hover:underline">Terms & Conditions</a>
@@ -115,12 +119,8 @@ export default function Footer() {
             <a href="#" className="hover:underline">Refund Policy</a>
             <a href="#" className="hover:underline">Guidelines</a>
           </div>
-          <div className="flex items-center gap-2 text-xs text-gray-400 mt-2 sm:mt-0">
-            <img src="/Logo.png" alt="GNJ Worldwide Logo" className="h-5 w-auto" />
-            <span>© 2025 GNJ Worldwide</span>
-          </div>
         </div>
       </div>
     </footer>
   )
-} 
+}
