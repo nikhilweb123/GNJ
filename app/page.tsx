@@ -14,7 +14,7 @@ export default function Component() {
     target: containerRef,
     offset: ["start start", "end end"],
   })
-
+//Designed by Koncept Solution
   const [currentSection, setCurrentSection] = useState(0)
 
   // Transform values for different animations

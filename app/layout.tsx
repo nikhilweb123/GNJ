@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "GnJ Worldwide - IT Solutions",
   description: "Empowering Innovation Together",
 }
-
+//Designed by Koncept Solution
 export default function RootLayout({
   children,
 }: {
