@@ -110,7 +110,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 flex flex-wrap items-center justify-between text-sm text-gray-500">
           <div className="flex items-center gap-2 text-xs text-gray-400 mt-2 sm:mt-0">
             <img src="/Logo.png" alt="GNJ Worldwide Logo" className="h-5 w-auto" />
-            <span>© 2025 GNJ Worldwide | <a href="https://konceptsolution.in/" target="_blank" rel="noopener noreferrer">Designed by Koncept Solution</a></span>
+            <span>© 2025 GNJ Worldwide | <a className="text-sm text-blue-300" href="https://konceptsolution.in/" target="_blank" rel="noopener noreferrer">Designed by Koncept Solution</a></span>
           </div>
           <div className="flex flex-wrap gap-12">
             <a href="#" className="hover:underline">User Policy</a>
