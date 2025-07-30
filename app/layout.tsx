@@ -3,6 +3,7 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
+import { usePathname } from 'next/navigation';
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -16,15 +17,18 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const pathname = usePathname();
+  const isErrorPage = pathname === '/error'; // Assuming '/' is your error landing page
+
   return (
     <html lang="en">
       <head>
         <link rel="icon" href="/placeholder-logo.svg" type="image/svg+xml" />
       </head>
       <body className={inter.className} suppressHydrationWarning>
-        <Header />
+        {!isErrorPage && <Header />}
         <main>{children}</main>
-        <Footer />
+        {!isErrorPage && <Footer />}
       </body>
     </html>
   )
