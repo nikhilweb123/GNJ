@@ -12,11 +12,11 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-6">Company</h3>
             <div className="space-y-4">
               {[
-                { name: "About", href: "/about" },
-                { name: "Services", href: "/services" },
-                { name: "Industries", href: "/industries" },
-                { name: "Careers", href: "/careers" },
-                { name: "Contact", href: "/contact" },
+                { name: "About", href: "/#" },
+                { name: "Services", href: "/#" },
+                { name: "Industries", href: "/#" },
+                { name: "Careers", href: "/#" },
+                { name: "Contact", href: "/#" },
               ].map((item) => (
                 <Link key={item.name} href={item.href} passHref legacyBehavior>
                   <motion.a
@@ -35,11 +35,11 @@ export default function Footer() {
             <div className="space-y-4">
               {[
                 
-                { name: "Cyber Security", href: "/Cyber-Security" },
-                { name: "IT Support", href: "/IT-Support" },
-                { name: "IT Infrastructure", href: "/IT-Infrastructure" },
-                { name: "Refurbished, Rental Solutions", href: "#" },
-                { name: "Helpdesk Solutions", href: "/IT-Support" },
+                { name: "Cyber Security", href: "/" },
+                { name: "IT Support", href: "/" },
+                { name: "IT Infrastructure", href: "/" },
+                { name: "Refurbished, Rental Solutions", href: "/" },
+                { name: "Helpdesk Solutions", href: "/" },
               ].map((item) => (
                 <Link key={item.name} href={item.href} passHref legacyBehavior>
                   <motion.a

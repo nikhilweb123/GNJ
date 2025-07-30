@@ -13,13 +13,13 @@ export default function Header() {
 
   const menuItems = [
     { name: "Home", link: "/" },
-    { name: "About us", link: "/about" },
-    { name: "Solutions", link: "/solutions" },
-    { name: "Services", link: "/services" },
-    { name: "Industries", link: "/industries" },
-    { name: "Technology", link: "/technology" },
-    { name: "Careers", link: "/careers" },
-    { name: "Contact us", link: "/contact" },
+    { name: "About us", link: "/#" },
+    { name: "Solutions", link: "/#" },
+    { name: "Services", link: "/#" },
+    { name: "Industries", link: "/#" },
+    { name: "Technology", link: "/#" },
+    { name: "Careers", link: "/#" },
+    { name: "Contact us", link: "/#" },
   ]
 
   // Filter menu items for search
@@ -75,11 +75,11 @@ export default function Header() {
 
 
          { /* search button style in 82th line  */}
-          <div className="flex text-white items-center space-x-8">
+          <div className="hidden md:block flex text-white items-center space-x-8">
             <motion.div whileHover={{ scale: 1.1, rotate: 5 }}>
               <button
                 aria-label="Open search"
-                className="focus:outline-none py-4 px-2 rounded-xl bg-gradient-to-r from-pink-300 via-yellow-400 to-orange-500 text-black shadow-lg hover:from-pink-600 hover:to-orange-600 transition-colors"
+                className="hidden lg:hidden inline-flex focus:outline-none py-4 px-2 rounded-xl bg-gradient-to-r from-pink-300 via-yellow-400 to-orange-500 text-black shadow-lg hover:from-pink-600 hover:to-orange-600 transition-colors"
                 onClick={() => setShowSearch(true)}
               >
                 <Search className="w-6 h-6" />
@@ -87,8 +87,8 @@ export default function Header() {
             </motion.div>
             {/* Schedule Meeting Button (Desktop) */}
             <a
-              href="/contact"
-              className="hidden md:inline-flex items-center px-3 py-1 rounded-full font-semibold bg-gradient-to-r from-pink-500 via-yellow-400 to-orange-500 text-black shadow-lg hover:from-pink-600 hover:to-orange-600 transition-colors border-2 border-white/10 ml-2"
+              href="/"
+              className="hidden lg:hidden md:inline-flex items-center px-3 py-1 rounded-full font-semibold bg-gradient-to-r from-pink-500 via-yellow-400 to-orange-500 text-black shadow-lg hover:from-pink-600 hover:to-orange-600 transition-colors border-2 border-white/10 ml-2"
               style={{ letterSpacing: '0.03em' }}
             >
               Schedule Meeting
